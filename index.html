@@ -1,454 +1,226 @@
-
 <!DOCTYPE html>
-<html lang="en-GB">
-	<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta charset="utf-8" />
-		<title>
-		</title>
-		<style>
-			body { line-height:107%; widows:0; orphans:0; font-family:Calibri; font-size:11pt }
-			p { margin:0pt 0pt 8pt }
-			li, table { margin-top:0pt; margin-bottom:8pt }
-			.ListParagraph { margin-left:36pt; margin-bottom:8pt; text-align:left; page-break-before:auto; line-height:107%; widows:0; orphans:0; font-size:11pt; font-weight:normal; font-style:normal; letter-spacing:0pt; vertical-align:0pt }
-			span.Hyperlink { text-decoration:underline; color:#0563c1 }
-			span.UnresolvedMention { color:#605e5c; background-color:#e1dfdd }
-			span.WWCharLFO10LVL1 { font-family:Arial }
-			span.WWCharLFO10LVL2 { font-family:'Courier New' }
-			span.WWCharLFO10LVL3 { font-family:Wingdings }
-			span.WWCharLFO10LVL4 { font-family:Symbol }
-			span.WWCharLFO10LVL5 { font-family:'Courier New' }
-			span.WWCharLFO10LVL6 { font-family:Wingdings }
-			span.WWCharLFO10LVL7 { font-family:Symbol }
-			span.WWCharLFO10LVL8 { font-family:'Courier New' }
-			span.WWCharLFO10LVL9 { font-family:Wingdings }
-			span.WWCharLFO11LVL1 { font-family:Arial }
-			span.WWCharLFO11LVL2 { font-family:'Courier New' }
-			span.WWCharLFO11LVL3 { font-family:Wingdings }
-			span.WWCharLFO11LVL4 { font-family:Symbol }
-			span.WWCharLFO11LVL5 { font-family:'Courier New' }
-			span.WWCharLFO11LVL6 { font-family:Wingdings }
-			span.WWCharLFO11LVL7 { font-family:Symbol }
-			span.WWCharLFO11LVL8 { font-family:'Courier New' }
-			span.WWCharLFO11LVL9 { font-family:Wingdings }
-			span.WWCharLFO12LVL1 { font-family:Symbol }
-			span.WWCharLFO12LVL2 { font-family:'Courier New' }
-			span.WWCharLFO12LVL3 { font-family:Wingdings }
-			span.WWCharLFO12LVL4 { font-family:Symbol }
-			span.WWCharLFO12LVL5 { font-family:'Courier New' }
-			span.WWCharLFO12LVL6 { font-family:Wingdings }
-			span.WWCharLFO12LVL7 { font-family:Symbol }
-			span.WWCharLFO12LVL8 { font-family:'Courier New' }
-			span.WWCharLFO12LVL9 { font-family:Wingdings }
-			span.WWCharLFO13LVL1 { font-family:Symbol }
-			span.WWCharLFO13LVL2 { font-family:'Courier New' }
-			span.WWCharLFO13LVL3 { font-family:Wingdings }
-			span.WWCharLFO13LVL4 { font-family:Symbol }
-			span.WWCharLFO13LVL5 { font-family:'Courier New' }
-			span.WWCharLFO13LVL6 { font-family:Wingdings }
-			span.WWCharLFO13LVL7 { font-family:Symbol }
-			span.WWCharLFO13LVL8 { font-family:'Courier New' }
-			span.WWCharLFO13LVL9 { font-family:Wingdings }
-			span.WWCharLFO14LVL1 { font-family:Symbol }
-			span.WWCharLFO14LVL2 { font-family:'Courier New' }
-			span.WWCharLFO14LVL3 { font-family:Wingdings }
-			span.WWCharLFO14LVL4 { font-family:Symbol }
-			span.WWCharLFO14LVL5 { font-family:'Courier New' }
-			span.WWCharLFO14LVL6 { font-family:Wingdings }
-			span.WWCharLFO14LVL7 { font-family:Symbol }
-			span.WWCharLFO14LVL8 { font-family:'Courier New' }
-			span.WWCharLFO14LVL9 { font-family:Wingdings }
-			span.WWCharLFO15LVL1 { font-family:Symbol }
-			span.WWCharLFO15LVL2 { font-family:'Courier New' }
-			span.WWCharLFO15LVL3 { font-family:Wingdings }
-			span.WWCharLFO15LVL4 { font-family:Symbol }
-			span.WWCharLFO15LVL5 { font-family:'Courier New' }
-			span.WWCharLFO15LVL6 { font-family:Wingdings }
-			span.WWCharLFO15LVL7 { font-family:Symbol }
-			span.WWCharLFO15LVL8 { font-family:'Courier New' }
-			span.WWCharLFO15LVL9 { font-family:Wingdings }
-			span.WWCharLFO16LVL1 { font-family:Symbol }
-			span.WWCharLFO16LVL2 { font-family:'Courier New' }
-			span.WWCharLFO16LVL3 { font-family:Wingdings }
-			span.WWCharLFO16LVL4 { font-family:Symbol }
-			span.WWCharLFO16LVL5 { font-family:'Courier New' }
-			span.WWCharLFO16LVL6 { font-family:Wingdings }
-			span.WWCharLFO16LVL7 { font-family:Symbol }
-			span.WWCharLFO16LVL8 { font-family:'Courier New' }
-			span.WWCharLFO16LVL9 { font-family:Wingdings }
-			span.WWCharLFO17LVL1 { font-family:Symbol }
-			span.WWCharLFO17LVL2 { font-family:'Courier New' }
-			span.WWCharLFO17LVL3 { font-family:Wingdings }
-			span.WWCharLFO17LVL4 { font-family:Symbol }
-			span.WWCharLFO17LVL5 { font-family:'Courier New' }
-			span.WWCharLFO17LVL6 { font-family:Wingdings }
-			span.WWCharLFO17LVL7 { font-family:Symbol }
-			span.WWCharLFO17LVL8 { font-family:'Courier New' }
-			span.WWCharLFO17LVL9 { font-family:Wingdings }
-			span.WWCharLFO18LVL1 { font-family:Symbol; font-size:10pt }
-			span.WWCharLFO18LVL2 { font-family:'Courier New'; font-size:10pt }
-			span.WWCharLFO18LVL3 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO18LVL4 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO18LVL5 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO18LVL6 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO18LVL7 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO18LVL8 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO18LVL9 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO19LVL1 { font-family:Symbol; font-size:10pt }
-			span.WWCharLFO19LVL2 { font-family:'Courier New'; font-size:10pt }
-			span.WWCharLFO19LVL3 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO19LVL4 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO19LVL5 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO19LVL6 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO19LVL7 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO19LVL8 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO19LVL9 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO1LVL1 { font-family:Symbol }
-			span.WWCharLFO1LVL2 { font-family:'Courier New' }
-			span.WWCharLFO1LVL3 { font-family:Wingdings }
-			span.WWCharLFO1LVL4 { font-family:Symbol }
-			span.WWCharLFO1LVL5 { font-family:'Courier New' }
-			span.WWCharLFO1LVL6 { font-family:Wingdings }
-			span.WWCharLFO1LVL7 { font-family:Symbol }
-			span.WWCharLFO1LVL8 { font-family:'Courier New' }
-			span.WWCharLFO1LVL9 { font-family:Wingdings }
-			span.WWCharLFO20LVL1 { font-family:Symbol; font-size:10pt }
-			span.WWCharLFO20LVL2 { font-family:'Courier New'; font-size:10pt }
-			span.WWCharLFO20LVL3 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO20LVL4 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO20LVL5 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO20LVL6 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO20LVL7 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO20LVL8 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO20LVL9 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO21LVL1 { font-family:Symbol; font-size:10pt }
-			span.WWCharLFO21LVL2 { font-family:'Courier New'; font-size:10pt }
-			span.WWCharLFO21LVL3 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO21LVL4 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO21LVL5 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO21LVL6 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO21LVL7 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO21LVL8 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO21LVL9 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO22LVL1 { font-family:Symbol; font-size:10pt }
-			span.WWCharLFO22LVL2 { font-family:'Courier New'; font-size:10pt }
-			span.WWCharLFO22LVL3 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO22LVL4 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO22LVL5 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO22LVL6 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO22LVL7 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO22LVL8 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO22LVL9 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO23LVL1 { font-family:Symbol; font-size:10pt }
-			span.WWCharLFO23LVL2 { font-family:'Courier New'; font-size:10pt }
-			span.WWCharLFO23LVL3 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO23LVL4 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO23LVL5 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO23LVL6 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO23LVL7 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO23LVL8 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO23LVL9 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO24LVL1 { font-family:Symbol; font-size:10pt }
-			span.WWCharLFO24LVL2 { font-family:'Courier New'; font-size:10pt }
-			span.WWCharLFO24LVL3 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO24LVL4 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO24LVL5 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO24LVL6 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO24LVL7 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO24LVL8 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO24LVL9 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO25LVL1 { font-family:Symbol; font-size:10pt }
-			span.WWCharLFO25LVL2 { font-family:'Courier New'; font-size:10pt }
-			span.WWCharLFO25LVL3 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO25LVL4 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO25LVL5 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO25LVL6 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO25LVL7 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO25LVL8 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO25LVL9 { font-family:Wingdings; font-size:10pt }
-			span.WWCharLFO2LVL1 { font-family:Calibri }
-			span.WWCharLFO2LVL2 { font-family:'Courier New' }
-			span.WWCharLFO2LVL3 { font-family:Wingdings }
-			span.WWCharLFO2LVL4 { font-family:Symbol }
-			span.WWCharLFO2LVL5 { font-family:'Courier New' }
-			span.WWCharLFO2LVL6 { font-family:Wingdings }
-			span.WWCharLFO2LVL7 { font-family:Symbol }
-			span.WWCharLFO2LVL8 { font-family:'Courier New' }
-			span.WWCharLFO2LVL9 { font-family:Wingdings }
-			span.WWCharLFO3LVL1 { font-family:Calibri }
-			span.WWCharLFO3LVL2 { font-family:'Courier New' }
-			span.WWCharLFO3LVL3 { font-family:Wingdings }
-			span.WWCharLFO3LVL4 { font-family:Symbol }
-			span.WWCharLFO3LVL5 { font-family:'Courier New' }
-			span.WWCharLFO3LVL6 { font-family:Wingdings }
-			span.WWCharLFO3LVL7 { font-family:Symbol }
-			span.WWCharLFO3LVL8 { font-family:'Courier New' }
-			span.WWCharLFO3LVL9 { font-family:Wingdings }
-			span.WWCharLFO4LVL1 { font-family:Calibri }
-			span.WWCharLFO4LVL2 { font-family:'Courier New' }
-			span.WWCharLFO4LVL3 { font-family:Wingdings }
-			span.WWCharLFO4LVL4 { font-family:Symbol }
-			span.WWCharLFO4LVL5 { font-family:'Courier New' }
-			span.WWCharLFO4LVL6 { font-family:Wingdings }
-			span.WWCharLFO4LVL7 { font-family:Symbol }
-			span.WWCharLFO4LVL8 { font-family:'Courier New' }
-			span.WWCharLFO4LVL9 { font-family:Wingdings }
-			span.WWCharLFO5LVL1 { font-family:Arial }
-			span.WWCharLFO5LVL2 { font-family:'Courier New' }
-			span.WWCharLFO5LVL3 { font-family:Wingdings }
-			span.WWCharLFO5LVL4 { font-family:Symbol }
-			span.WWCharLFO5LVL5 { font-family:'Courier New' }
-			span.WWCharLFO5LVL6 { font-family:Wingdings }
-			span.WWCharLFO5LVL7 { font-family:Symbol }
-			span.WWCharLFO5LVL8 { font-family:'Courier New' }
-			span.WWCharLFO5LVL9 { font-family:Wingdings }
-			span.WWCharLFO6LVL1 { font-family:Arial }
-			span.WWCharLFO6LVL2 { font-family:'Courier New' }
-			span.WWCharLFO6LVL3 { font-family:Wingdings }
-			span.WWCharLFO6LVL4 { font-family:Symbol }
-			span.WWCharLFO6LVL5 { font-family:'Courier New' }
-			span.WWCharLFO6LVL6 { font-family:Wingdings }
-			span.WWCharLFO6LVL7 { font-family:Symbol }
-			span.WWCharLFO6LVL8 { font-family:'Courier New' }
-			span.WWCharLFO6LVL9 { font-family:Wingdings }
-			span.WWCharLFO7LVL1 { font-family:Arial }
-			span.WWCharLFO7LVL2 { font-family:'Courier New' }
-			span.WWCharLFO7LVL3 { font-family:Wingdings }
-			span.WWCharLFO7LVL4 { font-family:Symbol }
-			span.WWCharLFO7LVL5 { font-family:'Courier New' }
-			span.WWCharLFO7LVL6 { font-family:Wingdings }
-			span.WWCharLFO7LVL7 { font-family:Symbol }
-			span.WWCharLFO7LVL8 { font-family:'Courier New' }
-			span.WWCharLFO7LVL9 { font-family:Wingdings }
-			span.WWCharLFO8LVL1 { font-family:Arial }
-			span.WWCharLFO8LVL2 { font-family:'Courier New' }
-			span.WWCharLFO8LVL3 { font-family:Wingdings }
-			span.WWCharLFO8LVL4 { font-family:Symbol }
-			span.WWCharLFO8LVL5 { font-family:'Courier New' }
-			span.WWCharLFO8LVL6 { font-family:Wingdings }
-			span.WWCharLFO8LVL7 { font-family:Symbol }
-			span.WWCharLFO8LVL8 { font-family:'Courier New' }
-			span.WWCharLFO8LVL9 { font-family:Wingdings }
-			span.WWCharLFO9LVL1 { font-family:Arial }
-			span.WWCharLFO9LVL2 { font-family:'Courier New' }
-			span.WWCharLFO9LVL3 { font-family:Wingdings }
-			span.WWCharLFO9LVL4 { font-family:Symbol }
-			span.WWCharLFO9LVL5 { font-family:'Courier New' }
-			span.WWCharLFO9LVL6 { font-family:Wingdings }
-			span.WWCharLFO9LVL7 { font-family:Symbol }
-			span.WWCharLFO9LVL8 { font-family:'Courier New' }
-			span.WWCharLFO9LVL9 { font-family:Wingdings }
-@media (max-width: 900px) { 
-img { 
-   max-width: 100%;
-   height: auto;
-}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phil Hayward - CV</title>
+    <style>
+        /* Reset and general styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #99ccff;
+            color: #333;
+            line-height: 1.6;
+            padding: 1rem;
+        }
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .header h1 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 0.2rem;
+        }
+        .header p {
+            font-size: 1rem;
+            color: #555;
+        }
+        .header a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .header a:hover {
+            text-decoration: underline;
+        }
+        /* Section Styles */
+        .section {
+            background: #CCE5FF;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .section:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            transform: translateY(-4px);
+        }
+        .section-title {
+            font-size: 1.5rem;
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 0.3rem;
+            margin-bottom: 1rem;
+        }
+        /* Summary */
+        .summary {
+            font-size: 1rem;
+            color: #555;
+        }
+        /* Skills */
+        .skills ul {
+            list-style-type: none;
+            padding-left: 1rem;
+        }
+        .skills ul li {
+            font-size: 0.95rem;
+            color: #333;
+            padding-left: 1.2rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+        .skills ul li::before {
+            content: "•";
+            color: #007bff;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        /* Experience */
+        .experience-item {
+            margin-bottom: 1.5rem;
+        }
+        .experience-item h3 {
+            font-size: 1.2rem;
+            color: #333;
+        }
+        .experience-item .position, .experience-item .dates {
+            display: inline-block;
+            color: #555;
+            font-weight: normal;
+        }
+        .experience-item .dates {
+            font-size: 0.9rem;
+            color: #777;
+            float: right;
+        }
+        .experience-item ul {
+            list-style-type: disc;
+            padding-left: 1.2rem;
+            margin-top: 0.5rem;
+        }
+        /* Education */
+        .education h3 {
+            font-size: 1.2rem;
+            color: #333;
+        }
+        .education p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+        .education .year {
+            font-size: 0.9rem;
+            color: #777;
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
 
-.table-container {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-}
+<div class="container">
+    <!-- Header -->
+    <div class="header">
+        <h1>Phil Hayward</h1>
+        <p>0788-3892589 | philip.hayward@outlook.com | <a href="https://www.linkedin.com/in/pahayward">LinkedIn</a></p>
+    </div>
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
+    <!-- Summary Section -->
+    <section class="section">
+        <h2 class="section-title">Summary</h2>
+        <p class="summary">Seasoned Software Engineer with extensive experience in C++, C#, and Python, specializing in networking, cryptography, and SDK development. Proven track record in leading complex projects involving low-level systems diagnostics, security hardening, and CI/CD improvements. Seeking a role where I can leverage my technical expertise and leadership skills.</p>
+    </section>
 
-td, th {
-    padding: 8px;
-    text-align: left;
-    border: 1px solid #ddd;
-}
-}	
+    <!-- Skills Section -->
+    <section class="section skills">
+        <h2 class="section-title">Key Skills</h2>
+        <ul>
+            <li>C++, Python & C# development for Windows and Linux, using STL & Boost</li>
+            <li>Parallel, concurrent, multithreaded pattern-based design development for high performance</li>
+            <li>User interface design with WPF (XAML), WinForms, or HTML/CSS/JavaScript</li>
+            <li>Test Driven Development (TDD) using CppUnit, xUnit and unit testing</li>
+            <li>Hiring, mentoring, leading complex projects, business focused</li>
+        </ul>
+    </section>
 
+    <!-- Experience Section -->
+    <section class="section experience">
+        <h2 class="section-title">Experience</h2>
 
-		</style>
-	</head>
-	<body>
-			<p style="page-break-before:always">
-				&#xa0;
-			</p>
-			<table style="width:450.75pt; margin-bottom:0pt; border-collapse:collapse">
-				<tr>
-					<td style="width:439.95pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
-						<p style="margin-bottom:0pt; line-height:normal">
-							<span class="DefaultParagraphFont0" style="font-family:Arial; font-size:9pt; font-weight:bold">Phil Hayward | 0788-3892589 | </span><a href="mailto:philip.hayward@outlook.com" target="_top" style="text-decoration:none"><span class="Hyperlink" style="font-family:Arial; font-size:9pt; font-weight:bold">philip.hayward@outlook.com</span></a><span class="DefaultParagraphFont0" style="font-family:Arial; font-size:9pt; font-weight:bold"> |</span><span class="DefaultParagraphFont0" style="font-family:Arial; font-size:9pt; font-weight:bold">&#xa0; </span><a href="https://www.linkedin.com/in/pahayward" target="_top" style="text-decoration:none"><span class="Hyperlink" style="font-family:Arial; font-size:9pt; font-weight:bold">https://www.linkedin.com/in/pahayward</span></a><span class="DefaultParagraphFont0" style="font-family:Arial; font-size:9pt; font-weight:bold"> </span>
-						</p>
-						<p style="margin-bottom:0pt; line-height:normal; font-size:9pt">
-							<span style="font-family:Arial">&#xa0;</span>
-						</p>
-					</td>
-				</tr>
-				<tr>
-					<td style="width:439.95pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
-						<p style="margin-bottom:0pt; line-height:normal; font-size:9pt">
-							<span class="DefaultParagraphFont0" style="font-family:Arial; font-weight:bold">Summary</span>
-						</p>
-						<p style="margin-bottom:0pt; line-height:normal; font-size:9pt">
-							<span style="font-family:Arial">&#xa0;</span>
-						</p>
-						<p style="margin-bottom:0pt; line-height:normal; font-size:9pt">
-							<span style="font-family:Arial">Seasoned Software Engineer with extensive experience in C++, C#, and Python, specializing in networking, cryptography, and SDK development. Proven track record in leading complex projects involving low-level systems diagnostics, security hardening, and CI/CD improvements. Seeking a role where I can leverage my technical expertise and leadership skills. </span>
-						</p>
-						<p style="margin-bottom:0pt; line-height:normal; font-size:9pt">
-							<span style="font-family:Arial">&#xa0;</span>
-						</p>
-						<p style="margin-bottom:0pt; line-height:normal; font-size:9pt">
-							<span style="font-family:Arial">&#xa0;</span>
-						</p>
-						<p style="margin-bottom:0pt; line-height:normal">
-							<span class="DefaultParagraphFont0" style="font-family:Arial; font-size:9pt; font-weight:bold">Key Skills</span><br /><span class="DefaultParagraphFont0" style="font-family:Arial; font-size:9pt; font-weight:bold"> </span>
-						</p>
-						<ul style="margin:0pt; padding-left:0pt">
-							<li class="ListParagraph" style="margin-left:27.14pt; margin-bottom:0pt; line-height:normal; padding-left:8.86pt; font-family:serif; font-size:9pt; letter-spacing:normal; vertical-align:baseline">
-								<span style="font-family:Arial">C++, Python &amp; C# development for Windows and Linux, using STL &amp; Boost </span>
-							</li>
-							<li class="ListParagraph" style="margin-left:27.14pt; margin-bottom:0pt; line-height:normal; padding-left:8.86pt; font-family:serif; font-size:9pt; letter-spacing:normal; vertical-align:baseline">
-								<span style="font-family:Arial">Parallel, concurrent, multithreaded pattern-based design development for high performance </span>
-							</li>
-							<li class="ListParagraph" style="margin-left:27.14pt; margin-bottom:0pt; line-height:normal; padding-left:8.86pt; font-family:serif; font-size:9pt; letter-spacing:normal; vertical-align:baseline">
-								<span style="font-family:Arial">User interface design with WPF (XAML), WinForms, or HTML/CSS/JavaScript </span>
-							</li>
-							<li class="ListParagraph" style="margin-left:27.14pt; margin-bottom:0pt; line-height:normal; padding-left:8.86pt; font-family:serif; font-size:9pt; letter-spacing:normal; vertical-align:baseline">
-								<span style="font-family:Arial">Test Driven Development (TDD) using CppUnit, xUnit and unit testing </span>
-							</li>
-							<li class="ListParagraph" style="margin-left:27.14pt; margin-bottom:0pt; line-height:normal; padding-left:8.86pt; font-family:serif; font-size:9pt; letter-spacing:normal; vertical-align:baseline">
-								<span style="font-family:Arial">Hiring, mentoring, leading complex projects, business focused</span>
-							</li>
-						</ul>
-						<p class="ListParagraph" style="margin-bottom:0pt; text-indent:-18pt; line-height:normal">
-							<img src="1730014250_phil-hayward-2024-cplusplus/1730014250_phil-hayward-2024-cplusplus-1.png" width="3" height="3" alt="" />
-						</p>
-						<p style="margin-bottom:0pt; line-height:normal">
-							<span class="DefaultParagraphFont0" style="font-family:Arial; font-size:9pt; font-weight:bold">Experience</span><br />&#xa0;
-						</p>
-						<p style="margin-bottom:0pt; line-height:normal; font-size:9pt">
-							<span class="DefaultParagraphFont0" style="font-family:Arial; font-weight:bold">Lead Software Engineer (Networking/Mobile)</span><span class="DefaultParagraphFont0" style="font-family:Arial">, Lockwood Publishing, Nottingham </span>
-						</p>
-						<p style="margin-bottom:0pt; line-height:normal; font-size:9pt">
-							<span style="font-family:Arial">Nov 2021 – October 2024 (made redundant) </span>
-						</p>
-						<p style="margin-bottom:0pt; line-height:normal; font-size:9pt">
-							<span style="font-family:Arial">&#xa0;</span>
-						</p>
-						<ul style="margin:0pt; padding-left:0pt">
-							<li class="ListParagraph" style="margin-left:27.14pt; margin-bottom:0pt; line-height:normal; padding-left:8.86pt; font-family:serif; font-size:9pt; letter-spacing:normal; vertical-align:baseline">
-								<span style="font-family:Arial">Diagnosed and optimized NDK/C++ rendering subsystems for Android</span>
-							</li>
-							<li class="ListParagraph" style="margin-left:27.14pt; margin-bottom:0pt; line-height:normal; padding-left:8.86pt; font-family:serif; font-size:9pt; letter-spacing:normal; vertical-align:baseline">
-								<span style="font-family:Arial">Enhanced network stack with updated TLS layers and hardened cryptographic key security</span>
-							</li>
-							<li class="ListParagraph" style="margin-left:27.14pt; margin-bottom:0pt; line-height:normal; padding-left:8.86pt; font-family:serif; font-size:9pt; letter-spacing:normal; vertical-align:baseline">
-								<span style="font-family:Arial">Conducted comprehensive OWASP vulnerability &amp; risk analysis</span>
-							</li>
-							<li class="ListParagraph" style="margin-left:27.14pt; margin-bottom:0pt; line-height:normal; padding-left:8.86pt; font-family:serif; font-size:9pt; letter-spacing:normal; vertical-align:baseline">
-								<span style="font-family:Arial">Wireshark analysis of AWS/Client TLS handshake and login security</span>
-							</li>
-							<li class="ListParagraph" style="margin-left:27.14pt; margin-bottom:0pt; line-height:normal; padding-left:8.86pt; font-family:serif; font-size:9pt; letter-spacing:normal; vertical-align:baseline">
-								<span style="font-family:Arial">Built and enhanced Jenkins CI/CD pipelines (Python/Git/Perforce)</span>
-							</li>
-							<li class="ListParagraph" style="margin-left:27.14pt; margin-bottom:0pt; line-height:normal; padding-left:8.86pt; font-family:serif; font-size:9pt; letter-spacing:normal; vertical-align:baseline">
-								<span style="font-family:Arial">Line manager to one junior developer for networking &amp; security </span>
-							</li>
-							<li class="ListParagraph" style="margin-left:27.14pt; margin-bottom:0pt; line-height:normal; padding-left:8.86pt; font-family:serif; font-size:9pt; letter-spacing:normal; vertical-align:baseline">
-								<span style="font-family:Arial">Team leader for advertising &amp; consents management system implementation </span>
-							</li>
-						</ul>
-						<p class="ListParagraph" style="margin-bottom:0pt; line-height:normal; font-size:9pt">
-							<strong><span style="font-family:Arial; letter-spacing:normal">&#xa0;</span></strong>
-						</p>
-						<p style="margin-bottom:0pt; line-height:normal">
-							<span class="DefaultParagraphFont0" style="font-family:Arial; font-size:9pt; font-weight:bold">Senior Software Engineer</span><span class="DefaultParagraphFont0" style="font-family:Arial; font-size:9pt">, Certara, Sheffield (Pharmaceuticals R&amp;D) - C++/C#/WPF</span><span class="DefaultParagraphFont0" style="font-family:Arial; font-size:9pt; font-weight:bold"> </span><br /><span class="DefaultParagraphFont0" style="font-family:Arial; font-size:9pt">2008 – Nov 2021</span>
-						</p>
-						<p style="margin-bottom:0pt; line-height:normal; font-size:9pt">
-							<span style="font-family:Arial">&#xa0;</span>
-						</p>
-						<ul style="margin:0pt; padding-left:0pt">
-							<li class="ListParagraph" style="margin-left:27.14pt; margin-bottom:0pt; line-height:normal; padding-left:8.86pt; font-family:serif; font-size:9pt; letter-spacing:normal; vertical-align:baseline">
-								<span style="font-family:Arial">Developed C++/Ode simulation models for FDA approved drug interaction studies</span>
-							</li>
-							<li class="ListParagraph" style="margin-left:27.14pt; margin-bottom:0pt; line-height:normal; padding-left:8.86pt; font-family:serif; font-size:9pt; letter-spacing:normal; vertical-align:baseline">
-								<span style="font-family:Arial">Created 100+ automated Excel/C++/COM reports for clinical trial data analysis</span>
-							</li>
-							<li class="ListParagraph" style="margin-left:27.14pt; margin-bottom:0pt; line-height:normal; padding-left:8.86pt; font-family:serif; font-size:9pt; letter-spacing:normal; vertical-align:baseline">
-								<span style="font-family:Arial">Created several Visual Studio Tool for Office (VSTO) plugins for clinical data processing </span>
-							</li>
-							<li class="ListParagraph" style="margin-left:27.14pt; margin-bottom:0pt; line-height:normal; padding-left:8.86pt; font-family:serif; font-size:9pt; letter-spacing:normal; vertical-align:baseline">
-								<span style="font-family:Arial">Migrated legacy UI from MFC/HTML/CSS/COM to WPF/C#, modernizing user experience </span>
-							</li>
-							<li class="ListParagraph" style="margin-left:27.14pt; margin-bottom:0pt; line-height:normal; padding-left:8.86pt; font-family:serif; font-size:9pt; letter-spacing:normal; vertical-align:baseline">
-								<span style="font-family:Arial">Implemented low-level, high-performance database writers (C++) for Oracle/MSSQL</span>
-							</li>
-							<li class="ListParagraph" style="margin-left:27.14pt; margin-bottom:0pt; line-height:normal; padding-left:8.86pt; font-family:serif; font-size:9pt; letter-spacing:normal; vertical-align:baseline">
-								<span style="font-family:Arial">Completed EU Grant project with Azure Application, Entity Framework, C#, MS SQL</span>
-							</li>
-							<li class="ListParagraph" style="margin-left:27.14pt; margin-bottom:0pt; line-height:normal; padding-left:8.86pt; font-family:serif; font-size:9pt; letter-spacing:normal; vertical-align:baseline">
-								<span style="font-family:Arial">C# / WPF / XAML / JavaScript application UI development </span>
-							</li>
-							<li class="ListParagraph" style="margin-left:27.14pt; margin-bottom:0pt; line-height:normal; padding-left:8.86pt; font-family:serif; font-size:9pt; letter-spacing:normal; vertical-align:baseline">
-								<span style="font-family:Arial">Established and mentored a team of six testers, improving overall software quality </span>
-							</li>
-						</ul>
-						<p style="margin-bottom:0pt; line-height:normal">
-							<br /><span class="DefaultParagraphFont0" style="font-family:Arial; font-size:9pt; font-weight:bold">Senior Software, </span><span class="DefaultParagraphFont0" style="font-family:Arial; font-size:9pt">Various</span><span class="DefaultParagraphFont0" style="font-family:Arial; font-size:9pt; font-weight:bold">,</span><span class="DefaultParagraphFont0" style="font-family:Arial; font-size:9pt"> (Security, Vending, Print) - C++ for Windows / Unix </span><br /><span class="DefaultParagraphFont0" style="font-family:Arial; font-size:9pt">1996 – 2008</span>
-						</p>
-						<p style="margin-bottom:0pt; line-height:normal; font-size:9pt">
-							<span style="font-family:Arial">&#xa0;</span>
-						</p>
-						<ul style="margin:0pt; padding-left:0pt">
-							<li class="ListParagraph" style="margin-left:27.14pt; margin-bottom:0pt; line-height:normal; padding-left:8.86pt; font-family:serif; font-size:9pt; letter-spacing:normal; vertical-align:baseline">
-								<span style="font-family:Arial">Several city-scale CCTV infrastructure projects, using C, C++, and TCP/IP technologies.</span>
-							</li>
-							<li class="ListParagraph" style="margin-left:27.14pt; margin-bottom:0pt; line-height:normal; padding-left:8.86pt; font-family:serif; font-size:9pt; letter-spacing:normal; vertical-align:baseline">
-								<span style="font-family:Arial">Developed MIS data collection, processing and reporting applications for vending industry </span>
-							</li>
-							<li class="ListParagraph" style="margin-left:27.14pt; margin-bottom:0pt; line-height:normal; padding-left:8.86pt; font-family:serif; font-size:9pt; letter-spacing:normal; vertical-align:baseline">
-								<span style="font-family:Arial">Enhanced Unix-based print and fax queue systems to support high-volume transactional processing.</span>
-							</li>
-						</ul>
-					</td>
-				</tr>
-				<tr style="height:56.15pt">
-					<td style="width:439.95pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
-						<p>
-							<br /><span class="DefaultParagraphFont0" style="line-height:107%; font-family:Arial; font-size:9pt; font-weight:bold">Education </span>
-						</p>
-						<ul style="margin:0pt; padding-left:0pt">
-							<li class="ListParagraph" style="margin-top:8pt; margin-left:27.14pt; margin-bottom:0pt; line-height:normal; padding-left:8.86pt; font-family:serif; font-size:9pt; letter-spacing:normal; vertical-align:baseline">
-								<span style="font-family:Arial">1996 Sheffield Hallam University BSc (Honours 2.1) Software Engineering (C/Linux)</span>
-								<ul style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
-									<li class="ListParagraph" style="margin-left:27.8pt; margin-bottom:0pt; line-height:normal; padding-left:8.2pt; font-size:8pt; letter-spacing:normal; vertical-align:baseline">
-										<span style="font-family:Arial">Final year project – C for medical image processing </span>
-									</li>
-									<li class="ListParagraph" style="margin-left:27.8pt; margin-bottom:0pt; line-height:normal; padding-left:8.2pt; font-size:8pt; letter-spacing:normal; vertical-align:baseline">
-										<span style="font-family:Arial">Year in industry with ICL computers working on C/Unix </span>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</td>
-				</tr>
-				<tr style="height:15pt">
-					<td style="width:439.95pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
-						<p style="margin-bottom:0pt">
-							&#xa0;
-						</p>
-					</td>
-				</tr>
-				<tr style="height:15pt">
-					<td style="width:439.95pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
-						<p style="margin-bottom:0pt">
-							&#xa0;
-						</p>
-					</td>
-				</tr>
-			</table>
-			<p>
-				&#xa0;
-			</p>
-			<p style="margin-top:8pt; page-break-before:always">
-				&#xa0;
-			</p>
-	<p style="bottom: 10px; right: 10px; position: absolute;"><a href="https://wordtohtml.net" target="_blank" style="font-size:11px; color: #d0d0d0">Converted to HTML with WordToHTML.net</a></p>
+        <div class="experience-item">
+            <h3>Lead Software Engineer (Networking/Mobile), Lockwood Publishing, Nottingham</h3>
+            <p class="dates">Nov 2021 – October 2024 (made redundant)</p>
+            <ul>
+                <li>Diagnosed and optimized NDK/C++ rendering subsystems for Android</li>
+                <li>Enhanced network stack with updated TLS layers and hardened cryptographic key security</li>
+                <li>Conducted comprehensive OWASP vulnerability & risk analysis</li>
+                <li>Wireshark analysis of AWS/Client TLS handshake and login security</li>
+                <li>Built and enhanced Jenkins CI/CD pipelines (Python/Git/Perforce)</li>
+                <li>Line manager to one junior developer for networking & security</li>
+                <li>Team leader for advertising & consents management system implementation</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Senior Software Engineer, Certara, Sheffield (Pharmaceuticals R&D) - C++/C#/WPF</h3>
+            <p class="dates">2008 – Nov 2021</p>
+            <ul>
+                <li>Developed C++/Ode simulation models for FDA approved drug interaction studies</li>
+                <li>Created 100+ automated Excel/C++/COM reports for clinical trial data analysis</li>
+                <li>Created several Visual Studio Tool for Office (VSTO) plugins for clinical data processing</li>
+                <li>Migrated legacy UI from MFC/HTML/CSS/COM to WPF/C#, modernizing user experience</li>
+                <li>Implemented low-level, high-performance database writers (C++) for Oracle/MSSQL</li>
+                <li>Completed EU Grant project with Azure Application, Entity Framework, C#, MS SQL</li>
+                <li>C# / WPF / XAML / JavaScript application UI development</li>
+                <li>Established and mentored a team of six testers, improving overall software quality</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Senior Software, Various, (Security, Vending, Print) - C++ for Windows / Unix</h3>
+            <p class="dates">1996 – 2008</p>
+            <ul>
+                <li>Several city-scale CCTV infrastructure projects, using C, C++, and TCP/IP technologies.</li>
+                <li>Developed MIS data collection, processing and reporting applications for vending industry</li>
+                <li>Enhanced Unix-based print and fax queue systems to support high-volume transactional processing</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education">
+        <h2 class="section-title">Education</h2>
+        <div>
+            <h3>Sheffield Hallam University - BSc (Honours 2.1) Software Engineering (C/Linux)</h3>
+            <p class="year">1996</p>
+            <p>Final year project – C for medical image processing | Year in industry with ICL computers working on C/Unix</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Phil Hayward &copy; 2024</p>
+    </div>
+</div>
+
 </body>
 </html>
