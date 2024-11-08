@@ -133,6 +133,27 @@
             font-size: 0.9rem;
             color: #555;
         }
+
+        /* tooltips */
+        .hasTooltip {
+            position:relative;
+        }
+        .hasTooltip span {
+            display:none;
+        }
+        
+        .hasTooltip:hover span {
+            display:block;
+            background-color:black;
+            border-radius:5px;
+            color:white;
+            box-shadow:1px 1px 3px gray;
+            position:absolute;
+            padding:5px;
+            top:1.3em;
+            left:0px;
+            white-space: nowrap;
+        }
     </style>
 </head>
 <body>
@@ -181,7 +202,7 @@
         </div>
 
         <div class="experience-item">
-            <h3>Senior Software Engineer, <a href="https://www.certara.com/">Certara</a>, Sheffield (Pharmaceuticals R&D) - C++/C#/WPF</h3>
+            <h3>Senior Software Engineer, <a class="hasTooltip" href="https://www.certara.com/software/simcyp-pbpk/">Certara<span>Simcyp™ PBPK Simulator</span></a>, Sheffield (Pharmaceuticals R&D) - C++/C#/WPF</h3>
             <p class="dates">2008 – Nov 2021</p>
             <ul>
                 <li>Developed C++/Ode simulation models for FDA approved drug interaction studies</li>
