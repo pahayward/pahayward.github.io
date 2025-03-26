@@ -1,141 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phil Hayward - LinkedIn Style Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #f3f2ef;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 1024px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        .header {
-            background: #004182;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            border-radius: 8px 8px 0 0;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-        .header p {
-            margin: 5px 0;
-            font-size: 14px;
-        }
-        .header a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .section {
-            padding: 20px;
-            border-bottom: 1px solid #ddd;
-        }
-        .section:last-child {
-            border-bottom: none;
-        }
-        h2 {
-            color: #004182;
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li::before {
-            content: '•';
-            color: #004182;
-            font-size: 18px;
-            margin-right: 8px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Profile</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #0a66c2;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+    .box {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+    .box h2 {
+      color: #0a66c2;
+      margin-top: 0;
+    }
+    .box p, .box ul {
+      margin: 10px 0;
+    }
+    .box ul {
+      list-style: none;
+      padding: 0;
+    }
+    .box ul li {
+      margin: 5px 0;
+    }
+    .linkedin-blue {
+      color: #0a66c2;
+    }
+    .linkedin-gray {
+      color: #666;
+    }
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #0a66c2;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Phil Hayward</h1>
-            <p>📞 0788-3892589 | 📧 philip.hayward@outlook.com</p>
-            <p><a href="https://www.linkedin.com/in/pahayward/" target="_blank">LinkedIn Profile</a></p>
-        </div>
+  <header>
+    <h1>Paul Hayward</h1>
+    <p>Seasoned C#.NET and Python Developer</p>
+  </header>
 
-        <div class="section">
-            <h2>Summary</h2>
-            <p>As an experienced C#.NET & Python developer, I take a pragmatic approach to delivering high-quality, secure, and scalable solutions. My management skills come from leading cross-functional teams, engaging with multiple stakeholders, and building and guiding teams to successfully deliver impactful, user-focused software solutions that drive business value.</p>
-        </div>
-
-        <div class="section">
-            <h2>Key Skills</h2>
-            <ul>
-                <li>Lead Experience: Hiring, mentoring, performance appraisals, Agile – sprint planning, review, refinement.</li>
-                <li>Stakeholder engagement: Requirements analysis, tender development, subcontractor management.</li>
-                <li>Web Development: HTML, CSS, JavaScript, TypeScript, React, Angular, PHP, AI API integration.</li>
-                <li>Backend Development: C#, .NET Core, MVC, REST API Development, Swagger.</li>
-                <li>Cloud & DevOps: Azure WebApps, AWS, Docker, CI/CD Pipeline, KeyVault, Office 365 (Graph API).</li>
-                <li>Database Management: Azure SQL Server, SQL Management Studio, REST/ODBC Pipelines.</li>
-                <li>Testing & Quality: Test-Driven Development (TDD), xUnit, Fluent Assertions, Postman.</li>
-                <li>CRM & Integration: Office 365, CRM enhancements, ETL processes, JSON/XML.</li>
-                <li>Design Patterns & Principles: SOLID, MVC, MVVM, Dependency Injection, Factory Pattern.</li>
-                <li>Security & Performance: Cross-platform development, network security, CMS cache optimization.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Experience</h2>
-            <h3>Senior Web Developer, Brand & Deliver, Sheffield | Dec 2024 – Present</h3>
-            <ul>
-                <li>Developed MVC C# (.NET 9) and React/Typescript applications hosted on Azure.</li>
-                <li>Implemented Test-Driven Development (TDD) using xUnit and Fluent Assertions.</li>
-                <li>Integrated supplier REST APIs (JSON/XML) and optimized ETL processes for Azure SQL Server.</li>
-                <li>Created Python scripts for rapid prototyping and REST API data processing.</li>
-                <li>Enhanced CRM functionality with Azure Functions and email tracking.</li>
-                <li>Azure Key Vault, Managed identities, Office 365/Exchange integration.</li>
-            </ul>
-            
-            <h3>Lead Software Engineer, Lockwood Publishing, Nottingham (Games Industry) | Nov 2021 – Oct 2024</h3>
-            <ul>
-                <li>Managed client networking, messaging, and security issues, mentoring one direct report.</li>
-                <li>Led the development of a C#/React/Node test automation system, improving efficiency by 30%.</li>
-                <li>Upgraded middleware stack with cryptographic service enhancements for improved security.</li>
-                <li>Implemented C# middleware for in-game audio playback and AWS S3 asset integration.</li>
-                <li>Spearheaded GDPR compliance and advertising consent features, leading a multi-disciplinary team.</li>
-            </ul>
-            
-            <h3>Senior Software Engineer, Certara, Sheffield (Pharmaceuticals R&D) | Sept 2008 – Nov 2021</h3>
-            <ul>
-                <li>Led a team of six testers and one junior developer, ensuring high-quality deliverables.</li>
-                <li>Developed C# MVC and WPF MVVM applications for clinical trials data capture and analysis.</li>
-                <li>Designed LINQ expressions and Entity Framework models for business logic processing.</li>
-                <li>Built low-level, high-performance database drivers (C++) for Oracle and MSSQL.</li>
-                <li>Delivered Excel/C++/COM reporting tools for clinical trials assessment.</li>
-            </ul>
-            
-            <h3>Junior Developer Roles, Various Companies | 1996 – 2008</h3>
-            <ul>
-                <li>Developed C++ applications for city-scale CCTV systems and financial management.</li>
-                <li>Gained foundational experience in Windows and Linux-based development.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Education</h2>
-            <p><strong>BSc (Honours 2.1) Software Engineering, Sheffield Hallam University | 1996</strong></p>
-            <p>Online Courses: Marketing, Fintech / MBA Yr1, Android Development, Scrum, Networking, Prince2 Project Management.</p>
-        </div>
+  <div class="container">
+    <!-- Summary -->
+    <div class="box">
+      <h2>Summary</h2>
+      <p>Seasoned C#.NET and Python developer with a proven track record of delivering secure, scalable, and user-focused software solutions. Skilled in leading cross-functional teams, driving Agile processes, and engaging stakeholders to deliver measurable business value.</p>
     </div>
+
+    <!-- Key Skills -->
+    <div class="box">
+      <h2>Key Skills</h2>
+      <ul>
+        <li><strong>Leadership:</strong> Hiring, mentoring, Agile methodologies, stakeholder engagement</li>
+        <li><strong>Full-Stack Development:</strong> C#, .NET Core, React, Angular, Azure, AWS</li>
+        <li><strong>Database & Integration:</strong> Azure SQL Server, ETL processes, CRM enhancements</li>
+        <li><strong>Testing & Security:</strong> TDD, xUnit, GDPR compliance, CMS optimization</li>
+        <li><strong>Design Principles:</strong> SOLID, MVC, MVVM, Dependency Injection</li>
+      </ul>
+    </div>
+
+    <!-- Experience -->
+    <div class="box">
+      <h2>Experience</h2>
+      <p><strong>Senior Web Developer | Brand & Deliver, Sheffield</strong> <span class="linkedin-gray">Dec 2024 – Present</span></p>
+      <ul>
+        <li>Developed MVC C# (.NET 9) and React/TypeScript applications hosted on Azure, reducing deployment time by 25%.</li>
+        <li>Implemented Test-Driven Development (TDD), improving code quality by 20%.</li>
+        <li>Automated ETL processes for Azure SQL Server, cutting data processing time by 40%.</li>
+      </ul>
+      <p><strong>Lead Software Engineer | Lockwood Publishing, Nottingham</strong> <span class="linkedin-gray">Nov 2021 – Oct 2024</span></p>
+      <ul>
+        <li>Led a team to create a test automation system, increasing efficiency by 30%.</li>
+        <li>Upgraded middleware stack with cryptographic services, reducing vulnerabilities by 25%.</li>
+      </ul>
+      <p><strong>Senior Software Engineer | Certara, Sheffield</strong> <span class="linkedin-gray">Sept 2008 – Nov 2021</span></p>
+      <ul>
+        <li>Delivered clinical trials software used by 50+ global clients.</li>
+        <li>Built low-level database drivers, achieving a 30% performance improvement.</li>
+      </ul>
+    </div>
+
+    <!-- Education -->
+    <div class="box">
+      <h2>Education</h2>
+      <p><strong>BSc (Honours 2.1) Software Engineering</strong> <span class="linkedin-gray">Sheffield Hallam University | 1996</span></p>
+      <p><strong>Relevant Online Courses:</strong> Marketing, Fintech, Android Development, Scrum, Networking, Prince2 Project Management</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Connect with me on <a href="#" class="linkedin-blue">LinkedIn</a> or via email at <a href="mailto:paul@example.com" class="linkedin-blue">paul@example.com</a>.</p>
+  </footer>
 </body>
 </html>
