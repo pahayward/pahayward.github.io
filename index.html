@@ -3,482 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phil Hayward | Senior Full-Stack Developer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <meta name="description" content="Experienced C#/.NET and Python developer based in Sheffield, Yorkshire. Specializing in cloud architectures (Azure/AWS), React, and team leadership.">
-
-    <!-- Open Graph / Social Meta Tags (for LinkedIn sharing) -->
-    <meta property="og:title" content="Phil Hayward | Senior Full-Stack Developer">
-    <meta property="og:description" content="C#/.NET, Python, and React developer with 10+ years of experience in Yorkshire.">
-    <meta property="og:url" content="https://pahayward.github.io/">
-    <meta property="og:type" content="website">
-    
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Phil Hayward",
-      "jobTitle": "Senior Full-Stack Developer",
-      "address": {
-        "@type": "PostalAddress",
-        "addressRegion": "Yorkshire",
-        "addressLocality": "Doncaster"
-      },
-      "skills": "C#, .NET, Python, React, Azure, AWS",
-      "url": "https://pahayward.github.io/"
-    }
-    </script>
+    <title>Phil Hayward 2025.R1.7 PDF</title>
     <style>
-        :root {
-            --primary: #2563eb;
-            --primary-light: #3b82f6;
-            --secondary: #7c3aed;
-            --dark: #1e293b;
-            --light: #f8fafc;
-            --accent: #f59e0b;
-            --transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
-            color: var(--dark);
-            background-color: var(--light);
-            background-image: radial-gradient(circle at 10% 20%, rgba(248, 250, 252, 0.8) 0%, rgba(248, 250, 252, 1) 90%);
-        }
-        
-        .container {
-            max-width: 1100px;
+            margin: 0;
+            padding: 20px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 2rem;
+            color: #333;
         }
-        
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 3rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid rgba(30, 41, 59, 0.1);
+        h1 {
+            color: #2c3e50;
         }
-        
-        .name-title h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.5px;
+        .container {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
         }
-        
-        .name-title h2 {
-            font-weight: 400;
-            font-size: 1.1rem;
-            color: var(--dark);
-            opacity: 0.8;
-        }
-        
-        .contact-info {
-            text-align: right;
-        }
-        
-        .contact-info a {
-            display: inline-block;
-            margin-bottom: 0.5rem;
-            color: var(--dark);
-            text-decoration: none;
-            transition: var(--transition);
-            position: relative;
-        }
-        
-        .contact-info a:hover {
-            color: var(--primary);
-        }
-        
-        .contact-info a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary);
-            transition: var(--transition);
-        }
-        
-        .contact-info a:hover::after {
+        .pdf-container {
             width: 100%;
+            height: 600px;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
         }
-        
-        .section {
-            margin-bottom: 3rem;
-            position: relative;
-        }
-        
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            position: relative;
+        .download-btn {
             display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 15px;
+            transition: background-color 0.3s;
         }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background-color: var(--accent);
-        }
-        
-        .summary {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 3rem;
-            padding: 2rem;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            border-left: 4px solid var(--primary);
-            transition: var(--transition);
-        }
-        
-        .summary:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-        }
-        
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        
-        .skill-category {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
-            transition: var(--transition);
-            border-top: 3px solid var(--primary-light);
-        }
-        
-        .skill-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-        }
-        
-        .skill-category h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-        
-        .skill-category ul {
-            list-style: none;
-        }
-        
-        .skill-category li {
-            margin-bottom: 0.5rem;
-            position: relative;
-            padding-left: 1.2rem;
-        }
-        
-        .skill-category li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            font-weight: bold;
-        }
-        
-        .experience-item {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .experience-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-        }
-        
-        .experience-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(to bottom, var(--primary), var(--secondary));
-        }
-        
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        .job-title {
-            font-weight: 600;
-            font-size: 1.2rem;
-            color: var(--dark);
-        }
-        
-        .company {
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-        
-        .date {
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-        
-        .job-description ul {
-            list-style: none;
-        }
-        
-        .job-description li {
-            margin-bottom: 0.8rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        
-        .job-description li::before {
-            content: '▹';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-        }
-        
-        .education-item {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
-            transition: var(--transition);
-            margin-bottom: 1.5rem;
-        }
-        
-        .education-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-        }
-        
-        .education-title {
-            font-weight: 600;
-            color: var(--dark);
-            margin-bottom: 0.3rem;
-        }
-        
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .contact-info {
-                text-align: left;
-                margin-top: 1rem;
-            }
-            
-            .skills-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .job-header {
-                flex-direction: column;
-            }
+        .download-btn:hover {
+            background-color: #2980b9;
         }
     </style>
 </head>
 <body>
+    <h1>Phil Hayward 2025.R1.7</h1>
+    
     <div class="container">
-        <header>
-            <div class="name-title">
-                <h1>Phil Hayward</h1>
-                <h2>Senior Full-Stack Developer</h2>
-            </div>
-            <div class="contact-info">
-                <a href="mailto:philip.hayward@outlook.com">philip.hayward@outlook.com</a>
-                <a href="https://www.linkedin.com/in/pahayward/" >LinkedIn Profile</a>
-            </div>
-        </header>
+        <p>This page hosts the document "Phil Hayward 2025.R1.7". You can view it directly in your browser or download it using the button below.</p>
         
-        <div class="summary">
-            Experienced in C#/.NET, Python, React, and cloud architectures (Azure/AWS) with a background in team leadership, system optimization, and secure software delivery across gaming, e-commerce, and pharmaceutical R&D.
+        <div class="pdf-container">
+            <embed src="Phil%20Hayward%202025.R1.7.pdf" type="application/pdf" width="100%" height="100%">
         </div>
         
-        <section class="section">
-            <h2 class="section-title">Key Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <ul>
-                        <li>C#</li>
-                        <li>.NET Core</li>
-                        <li>Python</li>
-                        <li>REST APIs</li>
-                        <li>Azure Functions</li>
-                        <li>Entity Framework</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <ul>
-                        <li>React</li>
-                        <li>TypeScript</li>
-                        <li>Angular</li>
-                        <li>JavaScript</li>
-                        <li>MVC/MVVM</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Cloud & DevOps</h3>
-                    <ul>
-                        <li>Azure (WebApps, KeyVault, SQL)</li>
-                        <li>AWS (S3)</li>
-                        <li>Docker</li>
-                        <li>CI/CD</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Data & Testing</h3>
-                    <ul>
-                        <li>Azure SQL</li>
-                        <li>ETL</li>
-                        <li>xUnit</li>
-                        <li>Postman</li>
-                        <li>Oracle/MSSQL drivers</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Leadership</h3>
-                    <ul>
-                        <li>Agile Scrum</li>
-                        <li>Team Mentoring</li>
-                        <li>Stakeholder Management</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section">
-            <h2 class="section-title">Professional Experience</h2>
-            
-            <div class="experience-item">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Senior Web Developer</div>
-                        <div class="company">Brand & Deliver, Sheffield</div>
-                    </div>
-                    <div class="date">Dec 2024 – Present</div>
-                </div>
-                <div class="job-description">
-                    <ul>
-                        <li>Developed C# .NET 9 and React/TypeScript applications hosted on Azure.</li>
-                        <li>Implemented Test-Driven Development (TDD) with xUnit and Fluent Assertions.</li>
-                        <li>Integrated third-party REST APIs (JSON/XML) and optimize ETL processes for Azure SQL Server.</li>
-                        <li>Built Python scripts for rapid prototyping and API data processing</li>
-                        <li>Enhanced CRM functionality using Azure Functions and email tracking.</li>
-                        <li>Configured Azure Key Vault, Managed Identities, and Office 365/Exchange integrations.</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="experience-item">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Lead Software Engineer</div>
-                        <div class="company">Lockwood Publishing (Games Industry), Nottingham</div>
-                    </div>
-                    <div class="date">Nov 2021 – Oct 2024</div>
-                </div>
-                <div class="job-description">
-                    <ul>
-                        <li>Managed client networking, messaging, and security, mentoring a junior developer.</li>
-                        <li>Lead development of a C#/React/Node test automation system to streamline QA.</li>
-                        <li>Upgrade middleware stack with cryptographic enhancements for security hardening.</li>
-                        <li>Develop C# middleware for in-game audio playback and AWS S3 asset integration.</li>
-                        <li>Spearhead GDPR compliance and ad consent features, coordinating cross-functional teams.</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="experience-item">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Senior Software Engineer</div>
-                        <div class="company">Certara (Pharmaceuticals R&D), Sheffield</div>
-                    </div>
-                    <div class="date">Sept 2008 – Nov 2021</div>
-                </div>
-                <div class="job-description">
-                    <ul>
-                        <li>Lead a team of six testers and one junior developer, ensuring high-quality releases.</li>
-                        <li>Built C# MVC and WPF MVVM applications for clinical trials data capture and analysis.</li>
-                        <li>Design LINQ expressions and Entity Framework models for business logic processing.</li>
-                        <li>Develop low-level C++ database drivers for Oracle and MSSQL.</li>
-                        <li>Deliver Excel/C++/COM reporting tools for clinical trials assessment.</li>
-                        <li>Developed scientific modelling software using C++, R, Matlab for oncology applications</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="experience-item">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Early Career Roles</div>
-                    </div>
-                    <div class="date">1996–2008</div>
-                </div>
-                <div class="job-description">
-                    <ul>
-                        <li>Developed C++ applications for city-scale digital CCTV and security systems</li>
-                        <li>Windows and Linux environments development for printing & financial information systems</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section">
-            <h2 class="section-title">Education & Certifications</h2>
-            
-            <div class="education-item">
-                <div class="education-title">BSc (Hons) Software Engineering (2:1)</div>
-                <div>Sheffield Hallam University</div>
-            </div>
-            
-            <div class="education-item">
-                <div class="education-title">Professional Development</div>
-                <div>Scrum, Prince2, Azure, Fintech/MBA Fundamentals</div>
-            </div>
-        </section>
+        <a href="Phil%20Hayward%202025.R1.7.pdf" class="download-btn" download>Download PDF</a>
     </div>
 </body>
 </html>
