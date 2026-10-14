@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="theme-color" content="#050a14">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phil Hayward · Senior Full Stack Developer</title>
+<meta name="description" content="Phil Hayward: senior full stack developer. .NET, C#, Azure, React and TypeScript. Security, clinical science, consumer games and commerce.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#050a14; --bg-2:#08101e; --surface:#0c1628; --surface-2:#111e36; --line:#1b2a46; --line-2:#26395d;
+  --text:#dde8f8; --text-2:#a7b8d0; --muted:#6f819d;
+  --cyan:#22d3ee; --blue:#3b82f6; --green:#34d399;
+  --grad:linear-gradient(100deg,#22d3ee 0%,#3b82f6 45%,#34d399 100%);
+  --serif:'Space Grotesk',system-ui,sans-serif; --sans:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+  --ink:var(--text); --ink-2:var(--text-2); --paper:var(--bg); --paper-2:var(--surface); --coral:var(--cyan); --coral-ink:var(--cyan);
+  --gut:clamp(20px,5vw,72px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased;
+  background-image:linear-gradient(rgba(34,211,238,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(34,211,238,.035) 1px,transparent 1px);
+  background-size:56px 56px;background-attachment:fixed}
+a{color:inherit}
+img{max-width:100%;display:block}
+::selection{background:rgba(34,211,238,.28)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--gut)}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--cyan)}
+.eyebrow::before{content:"// ";color:var(--green)}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.06;margin:0;letter-spacing:-.02em;color:#f1f6ff}
+h2{font-size:clamp(32px,4.6vw,56px)}
+h3{font-size:clamp(24px,2.6vw,32px)}
+p{margin:0 0 1em}
+
+/* hero */
+.hero{position:relative;overflow:hidden;color:var(--text);min-height:min(92vh,820px);display:flex;flex-direction:column;justify-content:space-between;padding:clamp(28px,5vw,56px) 0 36px;
+  background:radial-gradient(900px 480px at 82% 8%,rgba(59,130,246,.30),transparent 62%),radial-gradient(700px 420px at 8% 92%,rgba(52,211,153,.18),transparent 60%),linear-gradient(180deg,#060d1c,#050a14)}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0 1px,transparent 1px 4px)}
+.hero .wrap{width:100%;position:relative;z-index:1}
+.hero .eyebrow{color:var(--green)}
+.hero h1{font-size:clamp(46px,9vw,118px);margin:clamp(40px,8vh,100px) 0 28px;max-width:11ch}
+.hero h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 22px rgba(34,211,238,.35))}
+.hero .lede{font-size:clamp(18px,2vw,23px);color:var(--text-2);max-width:36em}
+.hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-top:56px}
+.name{font:700 clamp(28px,3.4vw,42px)/1.1 var(--serif);color:#fff}
+.sub{color:var(--muted);font:400 14px/1.5 var(--mono);margin-top:8px}
+.links{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 18px;border:1px solid var(--line-2);border-radius:8px;text-decoration:none;font:500 12.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--text);background:rgba(13,23,41,.6);transition:.2s}
+.btn:hover{border-color:var(--cyan);color:var(--cyan);box-shadow:0 0 0 1px var(--cyan),0 0 22px -4px rgba(34,211,238,.55)}
+.btn.solid{background:var(--grad);border-color:transparent;color:#03101c;font-weight:600}
+.btn.solid:hover{color:#03101c;box-shadow:0 0 28px -2px rgba(34,211,238,.7)}
+.who{display:flex;align-items:center;gap:20px}
+.avatar{width:84px;height:84px;border-radius:50%;flex:none;display:grid;place-items:center;border:1px dashed var(--line-2);background:var(--surface);color:var(--muted);font:500 20px/1 var(--mono)}
+.avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover}
+.hero-line{display:flex;align-items:center;margin-top:40px}
+.hero-line span{width:9px;height:9px;border-radius:50%;background:var(--line-2);flex:none}
+.hero-line span:last-child{background:var(--green);box-shadow:0 0 14px var(--green)}
+.hero-line i{flex:1;height:1px;background:var(--line)}
+
+/* sticky chapter nav */
+.rail{position:sticky;top:0;z-index:20;background:rgba(5,10,20,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.rail ol{list-style:none;margin:0 auto;padding:0 var(--gut);max-width:1180px;display:flex;justify-content:space-between;gap:8px;position:relative}
+.rail li{flex:1}
+.rail a{display:block;text-decoration:none;padding:14px 0 12px;position:relative;color:var(--muted);transition:color .2s}
+.rail a::before{content:"";position:absolute;top:-1px;left:0;width:0;height:2px;background:var(--grad);box-shadow:0 0 12px var(--cyan);transition:width .35s}
+.rail small{display:block;font:400 11px/1 var(--mono);letter-spacing:.1em}
+.rail b{display:block;font:500 14px/1.3 var(--sans);margin-top:5px}
+.rail a:hover,.rail a.on{color:var(--text)}
+.rail a.on small{color:var(--cyan)}
+.rail a.on::before{width:100%}
+.rail li:last-child a{text-align:right}
+@media(max-width:720px){.rail b{display:none}.rail a{padding:12px 0}}
+
+section{padding:clamp(64px,10vw,128px) 0}
+.thread h2{max-width:20ch;margin:18px 0 56px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.stat{background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--line);border-radius:14px;padding:22px 22px 24px}
+.stat strong{display:block;font:700 clamp(40px,5vw,58px)/1 var(--serif);background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{display:block;color:var(--text-2);font-size:15px;margin-top:10px;max-width:24ch}
+
+/* chapters */
+.chapter{border-top:1px solid var(--line);position:relative;overflow:hidden}
+.chapter:nth-of-type(odd){background:linear-gradient(180deg,rgba(12,22,40,.55),rgba(5,10,20,0))}
+.chapter .big{position:absolute;right:var(--gut);bottom:-.18em;font:700 clamp(140px,22vw,300px)/1 var(--serif);color:transparent;-webkit-text-stroke:1px rgba(34,211,238,.13);pointer-events:none;user-select:none}
+.grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,5vw,80px);align-items:start}
+.grid.flip{grid-template-columns:minmax(0,6fr) minmax(0,5fr)}
+.grid.flip .shot{order:-1}
+@media(max-width:860px){.grid,.grid.flip{grid-template-columns:1fr}.grid.flip .shot{order:0}}
+.role{margin:18px 0 20px;font-size:15px;color:var(--muted);font-family:var(--mono)}
+.role b{color:var(--green);font-weight:500}
+.intro{font-size:18.5px;color:var(--text-2)}
+.facts{margin:32px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.facts li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
+.facts strong{font:600 19px/1.25 var(--serif);color:var(--cyan)}
+.facts span{color:var(--text-2);font-size:15.5px}
+@media(max-width:520px){.facts li{grid-template-columns:1fr;gap:4px}}
+
+.shot figure{margin:0}
+.frame{border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 30px 70px -30px rgba(0,0,0,.8),0 0 0 1px var(--line-2),0 0 44px -14px rgba(59,130,246,.45)}
+.frame .bar{height:30px;background:#0b1426;display:flex;align-items:center;gap:6px;padding:0 12px;border-bottom:1px solid var(--line)}
+.frame .bar i{width:9px;height:9px;border-radius:50%;background:var(--line-2)}
+.frame .bar i:nth-child(1){background:#ef4444aa}.frame .bar i:nth-child(2){background:#f59e0baa}.frame .bar i:nth-child(3){background:#34d399aa}
+.frame img{width:100%}
+figcaption{margin-top:14px;font-size:13.5px;color:var(--muted)}
+figcaption b{color:var(--text-2);font-weight:600}
+figcaption a{color:var(--cyan)}
+.placeholder{aspect-ratio:16/10;display:grid;place-items:center;text-align:center;padding:24px;border:1px dashed var(--line-2);border-radius:12px;background:repeating-linear-gradient(135deg,var(--surface),var(--surface) 14px,var(--bg-2) 14px,var(--bg-2) 28px);color:var(--muted);font:500 12px/1.6 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+
+.pub{margin-top:36px;background:linear-gradient(135deg,var(--surface-2),var(--surface));border:1px solid var(--line-2);border-left:3px solid var(--green);border-radius:12px;padding:24px 26px}
+.pub .eyebrow{color:var(--green)}
+.pub q{display:block;font:500 20px/1.4 var(--serif);margin:12px 0;color:#f1f6ff}
+.pub small{color:var(--muted);font-family:var(--mono);font-size:12.5px}
+
+/* architecture diagram */
+.arch{border:1px solid var(--line-2);border-radius:14px;background:var(--surface);padding:20px;display:grid;gap:10px;font-size:14px;text-align:center}
+.arch .row{display:grid;gap:10px;grid-auto-flow:column;grid-auto-columns:1fr}
+.arch .node{border:1px solid var(--blue);border-radius:8px;padding:10px 6px;font-weight:600;background:rgba(59,130,246,.10);color:#e6f0ff}
+.arch .bus{background:var(--grad);color:#03101c;border-radius:8px;padding:11px;font-weight:700;box-shadow:0 0 24px -6px rgba(34,211,238,.6)}
+.arch .mini{border-color:var(--line-2);background:var(--bg-2);font-weight:500;color:var(--text-2);font-size:13px}
+.arch .note{color:var(--muted);font:400 12px/1.4 var(--mono)}
+@media(max-width:520px){.arch .row{grid-auto-flow:row}}
+
+/* labs */
+.labs{background:linear-gradient(180deg,var(--bg-2),var(--bg));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.labs .eyebrow{color:var(--green)}
+.labs h2{margin:16px 0 14px}
+.labs .lede{color:var(--text-2);max-width:40em;font-size:19px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:22px;margin-top:48px}
+.card{background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,border-color .25s,box-shadow .25s}
+.card:hover{transform:translateY(-3px);border-color:var(--cyan);box-shadow:0 20px 50px -24px rgba(34,211,238,.45)}
+.showcase{margin-top:72px}
+.showcase h3{font-size:clamp(26px,3vw,36px);margin:12px 0 10px}
+.showcase .lede{margin-bottom:32px}
+.shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.shots figure{margin:0}
+.shots .wide{grid-column:1/-1}
+.shots .frame{background:#fff}
+.shots figcaption{color:var(--muted)}
+.shots figcaption b{color:var(--text)}
+@media(max-width:760px){.shots{grid-template-columns:1fr}}
+.card .art{background:#050a14;border-bottom:1px solid var(--line)}
+.card .art img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top}
+.card .placeholder{border:0;border-radius:0}
+.card .body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:12px;flex:1}
+.card h3{font-size:25px}
+.card p{color:var(--text-2);font-size:15.5px;margin:0}
+.fun{display:inline-block;vertical-align:middle;margin-left:8px;font:500 10px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--green);border:1px solid var(--green);border-radius:6px;padding:5px 7px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+.tags span{font:500 10.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line-2);border-radius:6px;padding:6px 9px;color:var(--text-2);background:rgba(34,211,238,.05)}
+.card a.more{font:500 12.5px/1 var(--mono);color:var(--cyan);text-decoration:none;letter-spacing:.04em}
+.card a.more:hover{text-decoration:underline}
+
+/* home lab */
+.homelab{border-top:1px solid var(--line)}
+.net{border:1px solid var(--line-2);border-radius:16px;background:var(--surface);padding:22px;display:grid;gap:12px;text-align:center;font-size:14px}
+.net .row{display:grid;gap:10px;grid-auto-flow:column;grid-auto-columns:1fr}
+.net .n{border:1px solid var(--blue);border-radius:10px;padding:10px 8px;font-weight:600;background:rgba(59,130,246,.10);color:#e6f0ff}
+.net .n small{display:block;font:400 11px/1.4 var(--mono);color:var(--muted);letter-spacing:.03em;margin-top:2px}
+.net .n.dark{background:var(--grad);color:#03101c;border-color:transparent}
+.net .n.dark small{color:#06283a}
+.net .n.soft{border-color:var(--line-2);background:var(--bg-2);font-weight:500;color:var(--text-2)}
+.net .link{color:var(--cyan);font:400 13px/1.3 var(--mono)}
+.net .box{border:1.5px dashed var(--green);border-radius:14px;padding:14px;display:grid;gap:10px;background:rgba(52,211,153,.05)}
+.net .box>b{font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+@media(max-width:620px){.net .row{grid-auto-flow:row}}
+
+/* capabilities + contact */
+.cap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:40px}
+.cap>div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px}
+.cap h4{font:500 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin:0 0 12px}
+.cap ul{margin:0;padding:0;list-style:none;color:var(--text-2);font-size:15.5px}
+.cap li{padding:6px 0;border-bottom:1px solid var(--line)}
+.cap li:last-child{border-bottom:0}
+.contact{background:radial-gradient(700px 300px at 80% 0%,rgba(59,130,246,.22),transparent 65%),var(--bg-2);border-top:1px solid var(--line)}
+.contact .row{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;align-items:flex-end}
+.contact h2{max-width:14ch;margin-top:16px}
+footer{padding:28px 0;font:400 12px/1.6 var(--mono);color:var(--muted);letter-spacing:.05em;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.card{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow">Portfolio · Senior Full Stack Developer</div>
+    <h1>Software that has to <em>work.</em></h1>
+    <p class="lede">City-scale surveillance, clinical science, a million players a month and an AI-era commerce platform. Four chapters, one habit: get close to the people using the software, find the bottleneck, ship the fix.</p>
+  </div>
+  <div class="wrap">
+    <div class="hero-foot">
+      <div class="who">
+        <div>
+          <div class="name">Phil Hayward</div>
+          <div class="sub">Doncaster, UK · .NET / C# · Azure · React / TypeScript</div>
+        </div>
+      </div>
+      <div class="links">
+        <a class="btn solid" href="#contact">Get in touch</a>
+        <a class="btn" href="https://github.com/pahayward">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/pahayward">LinkedIn</a>
+        <a class="btn" href="https://edgy-sled-confusion.ngrok-free.dev/">Get my CV</a>
+      </div>
+    </div>
+    <div class="hero-line" aria-hidden="true"><span></span><i></i><span></span><i></i><span></span><i></i><span></span><i></i><span></span></div>
+  </div>
+</header>
+
+<nav class="rail" aria-label="Career timeline">
+  <ol>
+    <li><a href="#security"><small>EARLIER</small><b>Synectics</b></a></li>
+    <li><a href="#pharma"><small>2008 – 2021</small><b>Certara · Simcyp</b></a></li>
+    <li><a href="#games"><small>2021 – 2024</small><b>Lockwood</b></a></li>
+    <li><a href="#commerce"><small>2024 – NOW</small><b>Brand ’n Deliver</b></a></li>
+    <li><a href="#labs"><small>ALWAYS</small><b>Labs</b></a></li>
+  </ol>
+</nav>
+
+<main>
+<section class="thread" id="thread">
+  <div class="wrap reveal">
+    <div class="eyebrow">The thread</div>
+    <h2>Different industries. The same job: make critical systems dependable, and make the people using them faster.</h2>
+    <div class="stats">
+      <div class="stat"><strong>13 yrs</strong><span>building clinical-trial simulation and biopharmaceutics data systems</span></div>
+      <div class="stat"><strong>1M</strong><span>peak monthly active users on the consumer game I helped lead</span></div>
+      <div class="stat"><strong>400</strong><span>cameras in one Manchester city-centre deployment</span></div>
+      <div class="stat"><strong>1</strong><span>peer-reviewed publication on anonymised clinical data sharing</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 -->
+<section class="chapter" id="security">
+  <div class="wrap grid reveal">
+    <div>
+      <div class="eyebrow">Chapter 01 · Security</div>
+      <h2 style="margin-top:16px">Watching over the city</h2>
+      <p class="role"><b>Senior Software &amp; Pre-Sales Support Engineer</b> · Synectics Systems, Sheffield</p>
+      <p class="intro">Where I learned that software lives or dies in the field. Digital recording and command-and-control for some of the most high-profile security projects of the era, delivered on site, often in the control room itself.</p>
+      <ul class="facts">
+        <li><strong>Ring of Steel</strong><span>City of London Police security cordon, digital recording and command and control.</span></li>
+        <li><strong>400</strong><span>cameras of MPEG-2 video recorded to a 120 TB tape system in Manchester city centre.</span></li>
+        <li><strong>WinPCap</strong><span>My technology choice for capturing UDP MPEG-2 streams, which made the encoding platform viable.</span></li>
+        <li><strong>Evidence</strong><span>Embedded MD5 checksums in captured video, used in the evidential chain in court.</span></li>
+      </ul>
+    </div>
+    <div class="shot">
+      <figure>
+        <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/synectics.jpg" alt="Synectics Synergy software overview page" loading="lazy"></div>
+        <figcaption><b>Synergy</b> · the Synectics command-and-control platform family, still protecting people and assets today.</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="big" aria-hidden="true">01</div>
+</section>
+
+<!-- 02 -->
+<section class="chapter" id="pharma">
+  <div class="wrap">
+    <div class="grid reveal">
+      <div>
+        <div class="eyebrow">Chapter 02 · Pharma &amp; clinical science</div>
+        <h2 style="margin-top:16px">Virtual patients, real decisions</h2>
+        <p class="role"><b>Senior Software Engineer</b> · Certara (Simcyp), Sheffield · 2008 – 2021</p>
+        <p class="intro">Thirteen years on the Simcyp Simulator, the PBPK platform drug developers and regulators use to predict how medicines behave in the body. I worked alongside the scientists: understanding the specification, prototyping, then shipping.</p>
+        <ul class="facts">
+          <li><strong>Comparison tool</strong><span>Weeks of manual checking of 350 MB, 40-sheet Excel results became a daily, automated statistical comparison in the gated build.</span></li>
+          <li><strong>10x</strong><span>Near-linear scale-out of large virtual-population simulations across Azure VMs.</span></li>
+          <li><strong>QA from 0 to 5</strong><span>Founded the QA function, hired two, and developed my two direct reports into line managers.</span></li>
+          <li><strong>ADC modelling</strong><span>Reporting, input screens and core ODE processing for antibody-drug conjugates, my most memorable project.</span></li>
+        </ul>
+      </div>
+      <div class="shot">
+        <figure>
+          <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/simcyp.jpg" alt="Simcyp Simulator substrate distribution screen" loading="lazy"></div>
+          <figcaption><b>Simcyp Simulator</b> · substrate distribution parameters for a minimal PBPK model.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="grid flip reveal" style="margin-top:clamp(56px,8vw,104px)">
+      <div>
+        <div class="eyebrow">Chapter 02 · Continued</div>
+        <h3 style="margin-top:16px">Sharing data rivals can trust</h3>
+        <p class="intro" style="margin-top:18px">For the EU IMI-funded OrBiTo project, thirteen pharmaceutical partners needed to pool biopharmaceutics data without exposing it. I built the first version of the anonymised data-sharing and curation system.</p>
+        <ul class="facts">
+          <li><strong>On site</strong><span>Requirements gathering in Sweden: data capture, blinding and privacy rules with the partners.</span></li>
+          <li><strong>Prototype first</strong><span>Excel prototypes and user interviews turned vague needs into a clear spec before production code.</span></li>
+        </ul>
+        <div class="pub">
+          <div class="eyebrow">Published</div>
+          <q>Biopharmaceutics data management system for anonymised data sharing and curation: First application with OrBiTo IMI project.</q>
+          <small>Comput Methods Programs Biomed. 2017;140:1–10 · PMID 28254086</small>
+        </div>
+      </div>
+      <div class="shot">
+        <figure>
+          <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/certara.jpg" alt="Certara website" loading="lazy"></div>
+          <figcaption><b>Certara</b> · model-informed drug development, from discovery to market access.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="grid reveal" style="margin-top:clamp(56px,8vw,104px)">
+      <div>
+        <div class="eyebrow">Chapter 02 · Continued</div>
+        <h3 style="margin-top:16px">Precision medicine for cancer, modelled</h3>
+        <p class="intro" style="margin-top:18px">Antibody-drug conjugates pair a tumour-seeking antibody with a potent cytotoxic payload, so the drug is delivered to the cancer cell rather than the whole body. Predicting how they behave in a population is a modelling problem as much as a biological one.</p>
+        <p class="intro">I worked with a world-leading scientist on the simulation and reporting for ADC modelling in Simcyp. I built all of the ADC reporting and some of the input screens, and helped implement parts of the core ODE processing, so scientists could model these therapies and see the results.</p>
+        <ul class="facts">
+          <li><strong>Reporting</strong><span>All of the ADC reporting, so scientists could interrogate and compare their simulations.</span></li>
+          <li><strong>Input screens</strong><span>WPF screens for entering ADC parameters.</span></li>
+          <li><strong>Core engine</strong><span>Helped implement parts of the ODE processing in C++.</span></li>
+        </ul>
+      </div>
+      <div class="shot">
+        <figure>
+          <div class="frame" style="padding:18px;background:#0c1628"><svg viewBox="0 0 600 340" role="img" aria-labelledby="adct adcd" style="width:100%;height:auto;display:block">
+  <title id="adct">How an antibody-drug conjugate works</title>
+  <desc id="adcd">An antibody-drug conjugate binds an antigen on a tumour cell, is taken inside the cell, and releases its cytotoxic payload.</desc>
+  <style>
+    .t{font:500 12px 'JetBrains Mono',monospace;fill:#a7b8d0;letter-spacing:.04em}
+    .n{font:700 14px 'JetBrains Mono',monospace;fill:#34d399}
+    .ab{stroke:#dde8f8;stroke-width:3.5;fill:none;stroke-linecap:round}
+    .lk{stroke:#6f819d;stroke-width:2;fill:none}
+    .pl{fill:#22d3ee}
+    .cell{fill:#0c1628;stroke:#3b82f6;stroke-width:2}
+    .arr{stroke:#6f819d;stroke-width:1.5;fill:none;marker-end:url(#h)}
+  </style>
+  <defs><marker id="h" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#6f819d"/></marker></defs>
+  <!-- legend ADC -->
+  <g transform="translate(46,40)">
+    <path class="ab" d="M0 0 L22 24 M44 0 L22 24 M22 24 L22 52"/>
+    <path class="lk" d="M22 52 L22 72"/><circle class="pl" cx="22" cy="82" r="10"/>
+  </g>
+  <text class="t" x="100" y="62">antibody</text>
+  <text class="t" x="100" y="112">linker</text>
+  <text class="t" x="100" y="128">+ payload</text>
+  <!-- key -->
+  <text class="t" x="20" y="214"><tspan class="n">1</tspan> binds antigen</text>
+  <text class="t" x="20" y="238"><tspan class="n">2</tspan> internalised</text>
+  <text class="t" x="20" y="262"><tspan class="n">3</tspan> linker cleaved</text>
+  <text class="t" x="20" y="286"><tspan class="n">4</tspan> payload kills</text>
+  <!-- cell -->
+  <rect class="cell" x="250" y="130" width="330" height="195" rx="40"/>
+  <text class="t" x="415" y="156" text-anchor="middle">tumour cell</text>
+  <!-- antigen on membrane -->
+  <path class="ab" d="M300 130 L300 118 M292 110 L300 118 M308 110 L300 118" style="stroke:#3b82f6;stroke-width:3"/>
+  <!-- bound ADC (inverted) -->
+  <g transform="translate(300,108)">
+    <path class="ab" d="M0 -46 L0 -26 M0 -26 L-14 -2 M0 -26 L14 -2"/>
+    <path class="lk" d="M0 -46 L0 -58"/><circle class="pl" cx="0" cy="-68" r="9"/>
+  </g>
+  <text class="n" x="326" y="84">1</text>
+  <!-- internalise -->
+  <path class="arr" d="M296 166 C 310 190, 340 205, 368 218"/>
+  <text class="n" x="318" y="204">2</text>
+  <!-- lysosome -->
+  <circle cx="412" cy="236" r="38" fill="#08101e" stroke="#22d3ee" stroke-width="2" stroke-dasharray="5 4"/>
+  <circle class="pl" cx="404" cy="232" r="8"/>
+  <text class="t" x="412" y="296" text-anchor="middle">lysosome</text>
+  <text class="n" x="396" y="194">3</text>
+  <!-- release -->
+  <path class="arr" d="M452 232 C 480 226, 496 214, 514 204"/>
+  <circle class="pl" cx="530" cy="196" r="7"/><circle class="pl" cx="550" cy="214" r="5"/><circle class="pl" cx="532" cy="224" r="4"/>
+  <text class="n" x="486" y="190">4</text>
+  <text class="t" x="540" y="260" text-anchor="middle">cell death</text>
+</svg></div>
+          <figcaption><b>How an ADC works</b> · schematic. Further reading: <a href="https://www.drugdiscoverynews.com/what-are-antibody-drug-conjugates-adcs-mechanism-pipeline-and-outlook-16778">What are antibody-drug conjugates?</a>, Drug Discovery News.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="grid flip reveal" style="margin-top:clamp(56px,8vw,104px)">
+      <div>
+        <div class="eyebrow">Chapter 02 · Continued</div>
+        <h3 style="margin-top:16px">Ten years of drawing the curves</h3>
+        <p class="intro" style="margin-top:18px">A large part of my years on Simcyp was output and reporting. Scientists judge a simulation by its plots, so I spent a good ten years turning engine results into charts: concentration against time for a virtual population, with the variability band and observed clinical data overlaid.</p>
+        <p class="intro">They were generated from the C++ engine through COM automation into Excel workbooks, so a scientist could open a result and compare it straight away.</p>
+        <ul class="facts">
+          <li><strong>Curves</strong><span>Concentration–time profiles, linear for oral doses and logarithmic for intravenous ones.</span></li>
+          <li><strong>Variability</strong><span>The simulated population as a band around the mean, not a single line.</span></li>
+          <li><strong>Evidence</strong><span>Observed clinical data points overlaid, so agreement is visible at a glance.</span></li>
+        </ul>
+      </div>
+      <div class="shot">
+        <figure>
+          <div class="frame" style="padding:12px;background:#fff"><img src="img/pbpk-plots.jpg" alt="Four plasma concentration against time plots for midazolam: oral doses on linear axes and intravenous doses on logarithmic axes, each with a simulated band and observed data points" loading="lazy"></div>
+          <figcaption><b>Typical Simcyp output</b> · predicted plasma concentration–time profiles against observed clinical data, restyled from the default colours. Excerpt from Figure 4, <i>Pharmaceutics</i> 2025, 17, 1582 (MDPI, open access), shown as an example of the kind of plot I produced.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="big" aria-hidden="true">02</div>
+</section>
+
+<!-- 03 -->
+<section class="chapter" id="games">
+  <div class="wrap grid reveal">
+    <div>
+      <div class="eyebrow">Chapter 03 · Consumer scale</div>
+      <h2 style="margin-top:16px">A million players a month</h2>
+      <p class="role"><b>Lead Networking Software Engineer</b> · Lockwood Publishing · Avakin Life · 2021 – 2024</p>
+      <p class="intro">A new kind of pressure: a free-to-play global game where every minute of downtime and every compliance gap costs revenue. Unity clients over TLS to Golang services on AWS, from 500,000 monthly players up to a million at peak.</p>
+      <ul class="facts">
+        <li><strong>Consent</strong><span>Sole engineer on worldwide GDPR, CCPA and LGPD consent management. Chose Usercentrics from about 20 vendors on compatibility, finance and legal compliance, and integrated it into the Android Unity client, working across Legal, Marketing, Tech and Finance under revenue-critical deadlines.</span></li>
+        <li><strong>Security</strong><span>Diffie-Hellman key exchange and cryptographic difficulty in login; replaced an unmaintainable client network stack.</span></li>
+        <li><strong>Networking</strong><span>Smooth asset downloads over laggy mobile connections; TLS diagnostics; render-pipeline timing in C++ on the Android NDK.</span></li>
+        <li><strong>Test farm</strong><span>Revived an inherited 30-device Android farm and added CPU and thermal telemetry with a React dashboard.</span></li>
+      </ul>
+    </div>
+    <div class="shot">
+      <figure>
+        <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/avakin.jpg" alt="Avakin Life website" loading="lazy"></div>
+        <figcaption><b>Avakin Life</b> · a 3D social world with up to 1M monthly active users.</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="big" aria-hidden="true">03</div>
+</section>
+
+<!-- 04 -->
+<section class="chapter" id="commerce">
+  <div class="wrap">
+    <div class="grid reveal">
+      <div>
+        <div class="eyebrow">Chapter 04 · Commerce</div>
+        <h2 style="margin-top:16px">Rebuilding the engine mid-flight</h2>
+        <p class="role"><b>Senior Full Stack Developer</b> · Brand ’n Deliver, Sheffield · 2024 – now</p>
+        <p class="intro">A highly autonomous role: own the architecture, and connect it to the suppliers and business clients around it, while the shop keeps trading. Much of the work is done with Claude Code.</p>
+        <ul class="facts">
+          <li><strong>.NET 10</strong><span>Moved Azure Functions into Docker containers: controlled startup, dependencies pre-installed, batch work as container jobs, scale-out.</span></li>
+          <li><strong>~90%</strong><span>Faster deployment (about 4 hours of manual steps to about 20 minutes) with Bicep IaC and a PowerShell orchestrator.</span></li>
+          <li><strong>Collage editor</strong><span>WYSIWYG visual editor with a custom mesh-warp engine. Its output reaches 16,000 people a week in marketing email.</span></li>
+          <li><strong>AI</strong><span>Gemini 2.5 advert templates in the render pipeline, via OpenRouter.</span></li>
+        </ul>
+      </div>
+      <div class="shot">
+        <figure>
+          <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/brandndeliver.jpg" alt="Brand 'n Deliver product page with live logo visualisation" loading="lazy"></div>
+          <figcaption><b>brandndeliver.co.uk</b> · product page with live logo visualisation and pricing.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="grid flip reveal" style="margin-top:clamp(56px,8vw,104px)">
+      <div>
+        <div class="eyebrow">Chapter 04 · Continued</div>
+        <h3 style="margin-top:16px">A visual editor for marketing</h3>
+        <p class="intro" style="margin-top:18px">The sales team and lead designer wanted to build branded collages without a developer. I designed the data schema and built a drag-and-drop WYSIWYG editor with a custom mesh-warp engine, in React, TypeScript and Fabric.js on a .NET back end.</p>
+        <p class="intro">It works as an editor for people and as an API for the email render pipeline, so the same layouts that marketing design are what customers receive.</p>
+      </div>
+      <div class="shot">
+        <figure>
+          <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/collage-editor.jpg" alt="Collage editor with product layout and template settings" loading="lazy"></div>
+          <figcaption><b>Collage editor</b> · drag-and-drop product layouts with distributor branding and colour themes.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="grid reveal" style="margin-top:clamp(56px,8vw,104px)">
+      <div>
+        <div class="eyebrow">Chapter 04 · Continued</div>
+        <h3 style="margin-top:16px">Artwork, Photoshop-style</h3>
+        <p class="intro" style="margin-top:18px">Each product needs its customer’s logo placed convincingly. I built an artwork editor that lets a designer define artwork areas on any product image, with clip paths and perspective warp, and preview the result live.</p>
+        <p class="intro">Layers, snapping, rulers and an opacity preview make it feel like a design tool, running in the browser. Built with TypeScript and C#, with Claude Code alongside.</p>
+      </div>
+      <div class="shot">
+        <figure>
+          <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/artwork-editor.jpg" alt="Artwork editor showing product image with artwork areas and layers panel" loading="lazy"></div>
+          <figcaption><b>Artwork editor</b> · per-product artwork areas, clip paths and perspective warp.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="grid flip reveal" style="margin-top:clamp(56px,8vw,104px)">
+      <div>
+        <div class="eyebrow">Chapter 04 · Continued</div>
+        <h3 style="margin-top:16px">AI adverts, generated and checked</h3>
+        <p class="intro" style="margin-top:18px">I built the AI advert wizard to take an approved design and generate every colour variant with Gemini through OpenRouter, using a pixel-faithful prompt so layout and wording stay identical.</p>
+        <p class="intro">The combined prompt is shown exactly as it will be sent, and results can be reviewed and discarded before anything is published. Built with TypeScript and C#, with Claude Code alongside.</p>
+      </div>
+      <div class="shot">
+        <figure>
+          <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/ai-adverts.jpg" alt="AI advert wizard with prompts, source image, colour choices and results" loading="lazy"></div>
+          <figcaption><b>AI advert wizard</b> · colour variants generated from one approved design.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="grid reveal" style="margin-top:clamp(56px,8vw,104px)">
+      <div>
+        <div class="eyebrow">Chapter 04 · Continued</div>
+        <h3 style="margin-top:16px">One platform, two brands</h3>
+        <p class="intro" style="margin:18px 0 24px">Both storefronts run on the platform I work on. Under the hood:</p>
+        <div class="arch" role="img" aria-label="Architecture: two storefronts call REST APIs, which feed Azure Service Bus, which drives the Visualiser, Embroidery and Housekeeper services, with results pushed back by SignalR.">
+          <div class="row"><div class="node">Brand ’n Deliver</div><div class="node">Ideasbynet</div></div>
+          <div class="note">↓ REST APIs · shared standards across a 470+ file codebase</div>
+          <div class="bus">Azure Service Bus</div>
+          <div class="row"><div class="node">Visualiser</div><div class="node">Embroidery</div><div class="node">Housekeeper</div></div>
+          <div class="note">↑ SignalR pushes results straight back to the browser</div>
+          <div class="row"><div class="node mini">Container Apps</div><div class="node mini">Key Vault</div><div class="node mini">SQL</div><div class="node mini">App Insights</div></div>
+        </div>
+        <ul class="facts">
+          <li><strong>Secured</strong><span>Led the secrets remediation and added Defender scanning on blob storage.</span></li>
+          <li><strong>Integrated</strong><span>Led the supplier integrations for two primary supplier APIs.</span></li>
+        </ul>
+      </div>
+      <div class="shot">
+        <figure>
+          <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/ideasbynet.jpg" alt="Ideasbynet storefront" loading="lazy"></div>
+          <figcaption><b>ideasbynet.com</b> · sister brand, same platform underneath.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="big" aria-hidden="true">04</div>
+</section>
+
+<!-- 05 -->
+<section class="labs" id="labs">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Chapter 05 · Labs</div>
+      <h2>Tools I build to learn fast and scratch real itches</h2>
+      <p class="lede">Side projects: practical AI tooling, offline learning, a game or two and a little pharmacokinetics.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <div class="art"><img src="img/vsnavmcp.jpg" alt="VsNavMcp README with walkthrough screenshot in Visual Studio" loading="lazy"></div>
+        <div class="body">
+          <h3>VsNavMcp</h3>
+          <p>An MCP server that lets Claude pin each explanation beside the actual line in a running Visual Studio and step you through a change set. No plugin: it drives VS through EnvDTE COM interop and the Running Object Table. Built for, and used on, my day-job codebase.</p>
+          <div class="tags"><span>MCP</span><span>C#</span><span>Visual Studio</span><span>COM</span></div>
+          <a class="more" href="https://github.com/pahayward/VsNavMCP">github.com/pahayward/VsNavMCP →</a>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="art"><img src="img/fluttertrain.jpg" alt="flutterTrain course library, lesson and quiz screens" loading="lazy"></div>
+        <div class="body">
+          <h3>flutterTrain</h3>
+          <p>An offline Android course app with runnable code. Python and Go execute on the phone itself, using an embedded CPython and a Go interpreter, with courses on Python, Go and SQL and a timed exam simulator.</p>
+          <div class="tags"><span>Flutter</span><span>Chaquopy</span><span>Gomobile</span><span>SQLite</span></div>
+          <p style="font-size:13px;color:#8c93a8">Private repository.</p>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="art"><img src="img/cvapp.png" alt="CVApp recruiter assistant: profile page and CV request form" loading="lazy"></div>
+        <div class="body">
+          <h3>CVApp</h3>
+          <p>A full-stack RAG application with an MCP backend that lets recruiters generate role-tailored CVs from a single, verified source of career facts, with a do-not-claim list built in.</p>
+          <div class="tags"><span>Python</span><span>MCP</span><span>RAG</span><span>Claude</span></div>
+          <a class="more" href="https://edgy-sled-confusion.ngrok-free.dev/">Try it live →</a>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="art"><img src="img/reelwords.png" alt="ReelWords: six spinning letter reels in a retro slot-machine UI" loading="lazy"></div>
+        <div class="body">
+          <h3>ReelWords <span class="fun">Just for fun</span></h3>
+          <p>A two-player word game on six spinning slot-machine reels, with a JoseBot opponent that searches letter permutations against a 163,000-word trie. Plays in the console or the browser, with a REST API in between.</p>
+          <div class="tags"><span>C#</span><span>.NET 10</span><span>Minimal API</span><span>Docker</span></div>
+          <a class="more" href="https://github.com/pahayward/reelwords">github.com/pahayward/reelwords →</a>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="art"><img src="img/triagebay.png" alt="TriageBay adviser queue showing a safety-critical fault sorted to the top" style="aspect-ratio:auto;object-fit:contain" loading="lazy"></div>
+        <div class="body">
+          <h3>TriageBay</h3>
+          <p>A chat-first garage triage and booking system built as an interview exercise. An LLM turns a customer’s free-text fault into a structured record, safety issues are flagged by the prompt and re-checked in deterministic code, and a human adviser stays in the loop at each gate. Developed against a local gpt-oss-20b in LM Studio, with 70 unit tests over the conversation state machine.</p>
+          <div class="tags"><span>C#</span><span>.NET</span><span>LM Studio</span><span>Local LLM</span><span>Guardrails</span></div>
+          <a class="more" href="https://github.com/pahayward/GarageTriageBay">github.com/pahayward/GarageTriageBay →</a>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="art"><img src="img/pkexplorer.png" alt="Caffeine PK explorer: dose list, body weight and half-life controls beside a concentration-time curve" loading="lazy"></div>
+        <div class="body">
+          <h3>Caffeine PK explorer <span class="fun">Just for fun</span></h3>
+          <p>A small pharmacokinetics sandbox: add coffees, teas and energy drinks, and watch the concentration curve build and clear. A one-compartment model with first-order absorption and elimination, doses superposed, and half-life presets for smokers and oral-contraceptive users. Plain JavaScript, no dependencies, with the model unit-tested against its closed-form results.</p>
+          <div class="tags"><span>JavaScript</span><span>PK modelling</span><span>Canvas</span></div>
+          <p style="font-size:13px;color:#8c93a8">Not published yet.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="showcase reveal">
+      <div class="eyebrow">Labs · Up close</div>
+      <h3>TriageBay</h3>
+      <p class="lede">A customer describes a fault in their own words; the assistant asks clarifying questions, books a slot, and a human adviser reviews. The dashed boxes in the chat are the (mocked) tool calls, so the agentic flow is visible rather than hidden.</p>
+      <div class="shots">
+        <figure>
+          <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/tb-screenshot1.png" alt="TriageBay customer chat ending in a confirmed booking" loading="lazy"></div>
+          <figcaption><b>One chat-first journey</b> · plate lookup, name, number and slot, with tool calls shown. The confirmation is hedged: subject to a technician reviewing.</figcaption>
+        </figure>
+        <figure>
+          <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/tb-screenshot2-1.png" alt="TriageBay adviser review screen with raw customer text beside the AI triage" loading="lazy"></div>
+          <figcaption><b>Adviser review</b> · the customer’s words, never edited, beside the AI’s structured breakdown, stamped with model and prompt version. Causes are possibilities, not diagnoses.</figcaption>
+        </figure>
+        <figure class="wide">
+          <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/tb-screenshot2.png" alt="TriageBay fault report queue sorted safety-critical first" loading="lazy"></div>
+          <figcaption><b>Adviser queue</b> · sorted safety-critical first, each row a short summary.</figcaption>
+        </figure>
+        <figure class="wide">
+          <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/tb-screenshot3.png" alt="TriageBay bookings review queue" loading="lazy"></div>
+          <figcaption><b>Bookings review</b> · self-service bookings are confirmed immediately and reviewed after the fact; reviewing is never a gate.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="homelab" id="homelab">
+  <div class="wrap grid reveal">
+    <div>
+      <div class="eyebrow">Home lab</div>
+      <h2 style="margin-top:16px">Production habits, at home</h2>
+      <p class="intro" style="margin-top:18px">A dual-core Celeron with 8 GB of RAM runs my smart home, my side projects and the AI tooling around them. It sits behind a 5G router with no inbound ports, so it forces the same disciplines as production: constrained resources, a locked-down perimeter and services that recover by themselves.</p>
+      <ul class="facts">
+        <li><strong>Constrained</strong><span>Debian 13 on an Acer Veriton: Celeron 1017U, 8 GB RAM. Docker containers and systemd services share it comfortably.</span></li>
+        <li><strong>Locked down</strong><span>Nothing is exposed directly. The CVApp recruiter bot is published through an ngrok tunnel, everything else is private, and the admin console is token-protected.</span></li>
+        <li><strong>Useful</strong><span>Home Assistant, Syncthing, my AI tooling (Claude Code, OpenCode, OpenClaw, Ollama) and the CVApp all run here.</span></li>
+      </ul>
+    </div>
+    <div class="shot">
+      <div class="net" role="img" aria-label="Home network: the internet reaches a 5G router with no inbound ports, then a Mesh Wi-Fi network. The server runs Home Assistant, CVApp, this site and AI tools. Smart home devices sit on the mesh.">
+        <div class="n soft">Internet<small>ngrok tunnel to the CVApp bot only</small></div>
+        <div class="link">↓</div>
+        <div class="n dark">5G router<small>no inbound ports</small></div>
+        <div class="link">↓</div>
+        <div class="n">Mesh Wi-Fi</div>
+        <div class="link">↓</div>
+        <div class="box">
+          <b>Debian server · Celeron · 8 GB</b>
+          <div class="row"><div class="n">Home Assistant<small>Docker</small></div><div class="n">CVApp<small>bot + admin</small></div><div class="n">This site<small>LAN</small></div></div>
+          <div class="row"><div class="n soft">Claude · OpenCode</div><div class="n soft">OpenClaw · Ollama</div><div class="n soft">Syncthing</div></div>
+        </div>
+        <div class="n soft">Smart home<small>Google Home Minis · Hive · satellite TV</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap reveal">
+    <div class="eyebrow">Toolkit</div>
+    <h2 style="margin-top:16px">What I reach for</h2>
+    <div class="cap">
+      <div><h4>Build</h4><ul><li>C# / .NET (Core, 10)</li><li>TypeScript, React</li><li>Python</li><li>C++, WPF / MVVM</li></ul></div>
+      <div><h4>Cloud &amp; delivery</h4><ul><li>Azure: Functions, Service Bus, Key Vault</li><li>Docker, Bicep IaC, CI/CD</li><li>Application Insights, OpenTelemetry</li></ul></div>
+      <div><h4>Secure &amp; compliant</h4><ul><li>GDPR / CCPA / LGPD consent</li><li>TLS, key exchange, secrets management</li><li>Anonymised, regulated data</li></ul></div>
+      <div><h4>Practice</h4><ul><li>AI-assisted development (Claude Code)</li><li>xUnit, TDD, QA strategy</li><li>Mentoring, stakeholder translation</li></ul></div>
+    </div>
+    <ul class="facts" style="margin-top:48px;max-width:760px">
+      <li><strong>Education</strong><span>BSc (Hons) Software Engineering, 2:1, Sheffield Hallam University, 1996. Specialising in C/Unix and image processing.</span></li>
+      <li><strong>Publication</strong><span>Biopharmaceutics data management system for anonymised data sharing and curation: First application with OrBiTo IMI project. Comput Methods Programs Biomed, 2017.</span></li>
+      <li><strong>Training</strong><span>AWS developer course series on edX: building, deploying and optimising on AWS (2019–2020). Coursera: Android mobile and cloud services (2014–2015), pattern-oriented software architectures for concurrent and networked systems (2013), and data science with R (2013–2014). PRINCE2 Practitioner (2010), since lapsed.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap reveal">
+    <div class="row">
+      <div>
+        <div class="eyebrow">Contact</div>
+        <h2>Got something that has to work?</h2>
+      </div>
+      <div class="links">
+        <a class="btn solid" href="mailto:philip.hayward@outlook.com">philip.hayward@outlook.com</a>
+        <a class="btn" href="https://github.com/pahayward">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/pahayward">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© Phil Hayward</span><span>Product screenshots belong to their respective owners.</span></div></footer>
+
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.rail a'));
+  var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+  if('IntersectionObserver' in window){
+    var spy=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){links.forEach(function(a){a.classList.remove('on')});var a=map[e.target.id];if(a)a.classList.add('on')}
+      });
+    },{rootMargin:'-45% 0px -50% 0px'});
+    Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)spy.observe(el)});
+    var rv=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');rv.unobserve(e.target)}})},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(function(el){rv.observe(el)});
+  }else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')})}
+})();
+</script>
+</body>
+</html>
