@@ -137,16 +137,6 @@ figcaption a{color:var(--cyan)}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:22px;margin-top:48px}
 .card{background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,border-color .25s,box-shadow .25s}
 .card:hover{transform:translateY(-3px);border-color:var(--cyan);box-shadow:0 20px 50px -24px rgba(34,211,238,.45)}
-.showcase{margin-top:72px}
-.showcase h3{font-size:clamp(26px,3vw,36px);margin:12px 0 10px}
-.showcase .lede{margin-bottom:32px}
-.shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
-.shots figure{margin:0}
-.shots .wide{grid-column:1/-1}
-.shots .frame{background:#fff}
-.shots figcaption{color:var(--muted)}
-.shots figcaption b{color:var(--text)}
-@media(max-width:760px){.shots{grid-template-columns:1fr}}
 .card .art{background:#050a14;border-bottom:1px solid var(--line)}
 .card .art img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top}
 .card .placeholder{border:0;border-radius:0}
@@ -159,19 +149,6 @@ figcaption a{color:var(--cyan)}
 .card a.more{font:500 12.5px/1 var(--mono);color:var(--cyan);text-decoration:none;letter-spacing:.04em}
 .card a.more:hover{text-decoration:underline}
 
-/* home lab */
-.homelab{border-top:1px solid var(--line)}
-.net{border:1px solid var(--line-2);border-radius:16px;background:var(--surface);padding:22px;display:grid;gap:12px;text-align:center;font-size:14px}
-.net .row{display:grid;gap:10px;grid-auto-flow:column;grid-auto-columns:1fr}
-.net .n{border:1px solid var(--blue);border-radius:10px;padding:10px 8px;font-weight:600;background:rgba(59,130,246,.10);color:#e6f0ff}
-.net .n small{display:block;font:400 11px/1.4 var(--mono);color:var(--muted);letter-spacing:.03em;margin-top:2px}
-.net .n.dark{background:var(--grad);color:#03101c;border-color:transparent}
-.net .n.dark small{color:#06283a}
-.net .n.soft{border-color:var(--line-2);background:var(--bg-2);font-weight:500;color:var(--text-2)}
-.net .link{color:var(--cyan);font:400 13px/1.3 var(--mono)}
-.net .box{border:1.5px dashed var(--green);border-radius:14px;padding:14px;display:grid;gap:10px;background:rgba(52,211,153,.05)}
-.net .box>b{font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
-@media(max-width:620px){.net .row{grid-auto-flow:row}}
 
 /* capabilities + contact */
 .cap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:40px}
@@ -610,6 +587,22 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         </div>
       </article>
       <article class="card reveal">
+        <div class="art"><img src="img/advertmcp.svg" alt="Product graphics, a sample advert and a prompt flow through an MCP tool into a finished advert" loading="lazy"></div>
+        <div class="body">
+          <h3>AdvertMCP</h3>
+          <p>An MCP server that is one distinct step in an advertising chain. It accepts individual product graphics, a sample advert and a prompt, and builds the advert. An LLM in an advertising workflow can request one with a single tool call.</p>
+          <div class="tags"><span>MCP</span><span>LLM tools</span><span>Advertising</span><span>Image generation</span></div>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="art"><img src="img/logomcp.svg" alt="A headless browser inspects a company website and picks out the most likely logo" loading="lazy"></div>
+        <div class="body">
+          <h3>LogoMCP</h3>
+          <p>An MCP server that looks up a company&rsquo;s logo, mainly from its own website, using Puppeteer and headless Chrome to make a best guess at the company icon. An LLM uses it to get a probable logo when generating customised adverts and branded merchandise.</p>
+          <div class="tags"><span>MCP</span><span>Puppeteer</span><span>Headless Chrome</span><span>Branding</span></div>
+        </div>
+      </article>
+      <article class="card reveal">
         <div class="art"><img src="img/fluttertrain.jpg" alt="flutterTrain course library, lesson and quiz screens" loading="lazy"></div>
         <div class="body">
           <h3>flutterTrain</h3>
@@ -637,7 +630,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         </div>
       </article>
       <article class="card reveal">
-        <div class="art"><img src="img/triagebay.png" alt="TriageBay adviser queue showing a safety-critical fault sorted to the top" style="aspect-ratio:auto;object-fit:contain" loading="lazy"></div>
+        <div class="art"><img src="img/tb-screenshot3.png" alt="TriageBay bookings review queue" style="aspect-ratio:auto;object-fit:contain" loading="lazy"></div>
         <div class="body">
           <h3>TriageBay</h3>
           <p>A chat-first garage triage and booking system built as an interview exercise. An LLM turns a customer’s free-text fault into a structured record, safety issues are flagged by the prompt and re-checked in deterministic code, and a human adviser stays in the loop at each gate. Developed against a local gpt-oss-20b in LM Studio, with 70 unit tests over the conversation state machine.</p>
@@ -654,61 +647,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <p style="font-size:13px;color:#8c93a8">Not published yet.</p>
         </div>
       </article>
-    </div>
-
-    <div class="showcase reveal">
-      <div class="eyebrow">Labs · Up close</div>
-      <h3>TriageBay</h3>
-      <p class="lede">A customer describes a fault in their own words; the assistant asks clarifying questions, books a slot, and a human adviser reviews. The dashed boxes in the chat are the (mocked) tool calls, so the agentic flow is visible rather than hidden.</p>
-      <div class="shots">
-        <figure>
-          <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/tb-screenshot1.png" alt="TriageBay customer chat ending in a confirmed booking" loading="lazy"></div>
-          <figcaption><b>One chat-first journey</b> · plate lookup, name, number and slot, with tool calls shown. The confirmation is hedged: subject to a technician reviewing.</figcaption>
-        </figure>
-        <figure>
-          <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/tb-screenshot2-1.png" alt="TriageBay adviser review screen with raw customer text beside the AI triage" loading="lazy"></div>
-          <figcaption><b>Adviser review</b> · the customer’s words, never edited, beside the AI’s structured breakdown, stamped with model and prompt version. Causes are possibilities, not diagnoses.</figcaption>
-        </figure>
-        <figure class="wide">
-          <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/tb-screenshot2.png" alt="TriageBay fault report queue sorted safety-critical first" loading="lazy"></div>
-          <figcaption><b>Adviser queue</b> · sorted safety-critical first, each row a short summary.</figcaption>
-        </figure>
-        <figure class="wide">
-          <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/tb-screenshot3.png" alt="TriageBay bookings review queue" loading="lazy"></div>
-          <figcaption><b>Bookings review</b> · self-service bookings are confirmed immediately and reviewed after the fact; reviewing is never a gate.</figcaption>
-        </figure>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="homelab" id="homelab">
-  <div class="wrap grid reveal">
-    <div>
-      <div class="eyebrow">Home lab</div>
-      <h2 style="margin-top:16px">Production habits, at home</h2>
-      <p class="intro" style="margin-top:18px">A dual-core Celeron with 8 GB of RAM runs my smart home, my side projects and the AI tooling around them. It sits behind a 5G router with no inbound ports, so it forces the same disciplines as production: constrained resources, a locked-down perimeter and services that recover by themselves.</p>
-      <ul class="facts">
-        <li><strong>Constrained</strong><span>Debian 13 on an Acer Veriton: Celeron 1017U, 8 GB RAM. Docker containers and systemd services share it comfortably.</span></li>
-        <li><strong>Locked down</strong><span>Nothing is exposed directly. The CVApp recruiter bot is published through an ngrok tunnel, everything else is private, and the admin console is token-protected.</span></li>
-        <li><strong>Useful</strong><span>Home Assistant, Syncthing, my AI tooling (Claude Code, OpenCode, OpenClaw, Ollama) and the CVApp all run here.</span></li>
-      </ul>
-    </div>
-    <div class="shot">
-      <div class="net" role="img" aria-label="Home network: the internet reaches a 5G router with no inbound ports, then a Mesh Wi-Fi network. The server runs Home Assistant, CVApp, this site and AI tools. Smart home devices sit on the mesh.">
-        <div class="n soft">Internet<small>ngrok tunnel to the CVApp bot only</small></div>
-        <div class="link">↓</div>
-        <div class="n dark">5G router<small>no inbound ports</small></div>
-        <div class="link">↓</div>
-        <div class="n">Mesh Wi-Fi</div>
-        <div class="link">↓</div>
-        <div class="box">
-          <b>Debian server · Celeron · 8 GB</b>
-          <div class="row"><div class="n">Home Assistant<small>Docker</small></div><div class="n">CVApp<small>bot + admin</small></div><div class="n">This site<small>LAN</small></div></div>
-          <div class="row"><div class="n soft">Claude · OpenCode</div><div class="n soft">OpenClaw · Ollama</div><div class="n soft">Syncthing</div></div>
-        </div>
-        <div class="n soft">Smart home<small>Google Home Minis · Hive · satellite TV</small></div>
-      </div>
     </div>
   </div>
 </section>

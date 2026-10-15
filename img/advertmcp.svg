@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Product graphics and a sample advert flow through an MCP tool into a finished advert">
+<defs>
+<linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#34d399"/></linearGradient>
+<pattern id="p" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#0e1a2e" stroke-width="1"/></pattern>
+</defs>
+<rect width="800" height="500" fill="#050a14"/><rect width="800" height="500" fill="url(#p)"/>
+<g font-family="JetBrains Mono,monospace" font-size="14" fill="#6f819d">
+<text x="60" y="64">// inputs</text><text x="318" y="64">// tool call</text><text x="590" y="64">// output</text></g>
+<g stroke="#3b82f6" stroke-width="2" fill="#0b1830">
+<rect x="60" y="90" width="150" height="90" rx="10"/><rect x="60" y="205" width="150" height="90" rx="10"/><rect x="60" y="320" width="150" height="90" rx="10"/></g>
+<g fill="none" stroke="#22d3ee" stroke-width="3" stroke-linejoin="round">
+<g transform="translate(0,-14) scale(1)"><circle cx="135" cy="128" r="14"/><path d="M105 158l22-22 16 16 16-16 16 22"/></g>
+<path d="M105 262h60M120 244h30"/></g>
+<g font-family="JetBrains Mono,monospace" font-size="13" fill="#a7b8d0" text-anchor="middle">
+<text x="135" y="172">product graphics</text><text x="135" y="287">sample advert</text><text x="135" y="402">prompt</text></g>
+<g fill="#22d3ee"><rect x="90" y="345" width="90" height="6" rx="3"/><rect x="90" y="360" width="64" height="6" rx="3" opacity=".6"/></g>
+<g stroke="url(#g)" stroke-width="3" fill="none"><path d="M210 135C265 135 270 250 320 250"/><path d="M210 250H320"/><path d="M210 365C265 365 270 250 320 250"/><path d="M480 250H575"/><path d="M565 238l14 12-14 12"/></g>
+<rect x="320" y="195" width="160" height="110" rx="16" fill="#0b1830" stroke="url(#g)" stroke-width="3"/>
+<text x="400" y="244" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="30" font-weight="700" fill="#e6f0ff">Advert</text>
+<text x="400" y="274" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="17" fill="#34d399">MCP</text>
+<rect x="590" y="100" width="150" height="300" rx="12" fill="#0b1830" stroke="#34d399" stroke-width="2"/>
+<rect x="606" y="116" width="118" height="110" rx="8" fill="url(#g)" opacity=".85"/>
+<circle cx="665" cy="171" r="26" fill="#050a14" opacity=".55"/>
+<rect x="606" y="244" width="96" height="12" rx="6" fill="#e6f0ff"/><rect x="606" y="268" width="118" height="7" rx="3.5" fill="#6f819d"/><rect x="606" y="284" width="104" height="7" rx="3.5" fill="#6f819d"/>
+<rect x="606" y="340" width="70" height="30" rx="15" fill="#22d3ee"/>
+</svg>
