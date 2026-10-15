@@ -89,11 +89,17 @@ section{padding:clamp(64px,10vw,128px) 0}
 .grid.flip{grid-template-columns:minmax(0,6fr) minmax(0,5fr)}
 .grid.flip .shot{order:-1}
 @media(max-width:860px){.grid,.grid.flip{grid-template-columns:1fr}.grid.flip .shot{order:0}}
+.people{margin-top:clamp(48px,7vw,88px);padding:28px clamp(20px,3vw,36px);border:1px solid rgba(34,211,238,.22);border-left:3px solid var(--green);border-radius:14px;background:rgba(34,211,238,.04)}
+.people h3{margin:0 0 6px}
+.people .eyebrow{margin-bottom:10px}
+.people ul{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:14px}
+.people li{color:var(--text-2)}
+.people li strong{color:var(--text);display:block;font-weight:600}
 .role{margin:18px 0 20px;font-size:15px;color:var(--muted);font-family:var(--mono)}
 .role b{color:var(--green);font-weight:500}
 .intro{font-size:18.5px;color:var(--text-2)}
 .facts{margin:32px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
-.facts li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
+.facts li{display:grid;grid-template-columns:minmax(min-content,1fr) minmax(0,2fr);gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
 .facts strong{font:600 19px/1.25 var(--serif);color:var(--cyan)}
 .facts span{color:var(--text-2);font-size:15.5px}
 @media(max-width:520px){.facts li{grid-template-columns:1fr;gap:4px}}
@@ -248,7 +254,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <li><strong>Ring of Steel</strong><span>City of London Police security cordon, digital recording and command and control.</span></li>
         <li><strong>Manchester</strong><span>Manchester city-centre deployment, digital recording and command and control.</span></li>
         <li><strong>Various Casinos</strong><span>Casino security systems, digital recording with high quality audio.</span></li>
-        <li><stromg>Rolls Royce</strong><span>Rolls Royce security systems, digital recording and command and control.</span></li>
+        <li><strong>Rolls Royce</strong><span>Rolls Royce security systems, digital recording and command and control.</span></li>
         <li><strong>500</strong><span>cameras of MPEG-2 video recorded to a 120 TB tape system in Manchester city centre.</span></li>
         <li><strong>WinPCap</strong><span>My technology choice for capturing UDP MPEG-2 streams, which made the encoding platform viable.</span></li>
         <li><strong>Evidence</strong><span>Crypto hashed, secured, digital forensically traceable, evidential standard.</span></li>
@@ -260,6 +266,24 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/synectics.jpg" alt="Synectics Synergy software overview page" loading="lazy"></div>
         <figcaption><b>Synergy</b> · the Synectics command-and-control platform family, still protecting people and assets today.</figcaption>
       </figure>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="people reveal">
+      <div class="eyebrow">People &amp; collaboration</div>
+      <h3>Who I worked with, and how I helped</h3>
+      <ul>
+        <li><strong>Customers and key stakeholders</strong>Worked directly with them to understand evidential and operating requirements in command-and-control centres, including local councils and other security-sensitive sites.</li>
+        <li><strong>Colleagues in development</strong>Helped build functional, performant video capture and playback systems.</li>
+        <li><strong>The bid team</strong>Contributed to verifying technical requirements on the bids for several large projects, which helped the company generate an estimated &pound;20M in revenue over two years.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="people reveal">
+      <div class="eyebrow">2006 &ndash; 2008 &middot; CoVi Technologies</div>
+      <h3>Then high-definition IP video, closer to the customer</h3>
+      <p class="intro" style="margin:10px 0 0">Senior Software &amp; Pre-Sales Support Engineer at the UK arm of a US high-definition IP video surveillance company, heavily involved with customers. Notable customers: <b>Lloyds TSB</b> data centres, the <b>Dyson</b> factory in Wiltshire, and <b>Morrisons</b> supermarkets (petrol stations UK-wide).</p>
     </div>
   </div>
   <div class="big" aria-hidden="true">01</div>
@@ -279,7 +303,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <li><strong>10x</strong><span>Near-linear scale-out of large virtual-population simulations across Azure VMs.</span></li>
           <li><strong>QA from 0 to 5</strong><span>Founded the QA team, hired two, and developed my two direct reports into line managers.</span></li>
           <li><strong>ADC modelling</strong><span>Reporting, input screens and core ODE processing for antibody-drug conjugates, my most memorable project.</span></li>
-          <li><strong>Pharmakokinetics</strong><span>Developed and maintained the PBPK model for drug disposition and exposure prediction.</span></li>
+          <li><strong>Pharmacokinetics</strong><span>Developed and maintained the PBPK model for drug disposition and exposure prediction.</span></li>
           <li><strong>Training & Support</strong><span>Provided training and ongoing support for users of the Simcyp Simulator.</span></li>
         </ul>
       </div>
@@ -404,6 +428,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       </div>
     </div>
   </div>
+  <div class="wrap">
+    <div class="people reveal">
+      <div class="eyebrow">People &amp; collaboration</div>
+      <h3>Who I worked with, and how I helped</h3>
+      <ul>
+        <li><strong>Two testers I hired</strong>Coached them on the technical detail, the test surface (interface and outputs), the scientific culture of evidence-based reasoning, and on working with different personalities. With mentoring on communication style and confidence, both went on to become department heads. I also helped hire three more testers.</li>
+        <li><strong>A junior developer</strong>Mentored them through Simcyp&rsquo;s internals, its architecture and the reporting system.</li>
+        <li><strong>The test &amp; dev teams</strong>Promoted Pluralsight training so people kept building their skills.</li>
+        <li><strong>The science team</strong>Championed a quality culture, and the case for repeatable, automated testing in simulation benchmarks.</li>
+        <li><strong>Clients in the US and Europe</strong>Gave training and support by WebEx, phone and email.</li>
+        <li><strong>Quality control &amp; auditors</strong>Worked in quality control development, took part in regulated external audits and helped develop SOPs for IT functions.</li>
+      </ul>
+    </div>
+  </div>
   <div class="big" aria-hidden="true">02</div>
 </section>
 
@@ -427,6 +465,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/avakin.jpg" alt="Avakin Life website" loading="lazy"></div>
         <figcaption><b>Avakin Life</b> · a 3D social world with up to 1M monthly active users.</figcaption>
       </figure>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="people reveal">
+      <div class="eyebrow">People &amp; collaboration</div>
+      <h3>Who I worked with, and how I helped</h3>
+      <ul>
+        <li><strong>A junior developer</strong>Led them through demanding cryptographic security requirements, and coached them on communicating and working with colleagues across the company.</li>
+        <li><strong>Marketing &amp; Legal</strong>Translated the technical requirements and obligations of working with a third-party consent-management provider, a decision with direct revenue consequences.</li>
+        <li><strong>Client services</strong>Helped the team with networking problems as seen from the client side.</li>
+        <li><strong>Security &amp; data analytics</strong>Helped them examine and understand patterns of API use by bad actors.</li>
+        <li><strong>The backend team</strong>Reviewed cryptographic cipher use for AWS and added logging of cipher use to help identify bad actors. Also identified architectural weaknesses in the login system that allowed multiple logins from botnets.</li>
+      </ul>
     </div>
   </div>
   <div class="big" aria-hidden="true">03</div>
@@ -525,6 +576,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <figcaption><b>ideasbynet.com</b> · sister brand, same platform underneath.</figcaption>
         </figure>
       </div>
+    </div>
+
+    <div class="people reveal">
+      <div class="eyebrow">People &amp; collaboration</div>
+      <h3>Who I worked with, and how I helped</h3>
+      <ul>
+        <li><strong>The lead designer</strong>We shaped the advert-copy editor together: a Photoshop-style, usable editing experience for people who are not designers.</li>
+        <li><strong>A junior developer</strong>Walked them through Visual Studio&rsquo;s automatic XML class generation for the supplier-import data layer, and we worked through Azure architecture together: why SignalR, Service Bus and Docker.</li>
+        <li><strong>Sales staff</strong>Gathered requirements with them for the CRM system and email outreach, so the tooling fitted how they actually sell.</li>
+      </ul>
     </div>
   </div>
   <div class="big" aria-hidden="true">04</div>
