@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="An AI agent question goes through an MCP server to a local SQLite database of UK companies, and a list of matching companies comes back">
+<defs>
+<linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#34d399"/></linearGradient>
+<pattern id="p" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#0e1a2e" stroke-width="1"/></pattern>
+</defs>
+<rect width="800" height="500" fill="#050a14"/><rect width="800" height="500" fill="url(#p)"/>
+<g font-family="JetBrains Mono,monospace" font-size="14" fill="#6f819d"><text x="40" y="52">// agent</text><text x="300" y="52">// mcp server</text><text x="540" y="52">// companies.db</text></g>
+<rect x="40" y="80" width="220" height="150" rx="14" fill="#0b1830" stroke="#3b82f6" stroke-width="2"/>
+<g font-family="JetBrains Mono,monospace" font-size="12" fill="#e6f0ff"><text x="58" y="112">&gt; list IT consultancies</text><text x="58" y="132">  in S17</text></g>
+<g fill="#13264a"><rect x="58" y="160" width="170" height="8" rx="4"/><rect x="58" y="178" width="130" height="8" rx="4"/><rect x="58" y="196" width="150" height="8" rx="4"/></g>
+<rect x="300" y="110" width="200" height="90" rx="16" fill="#0b1830" stroke="url(#g)" stroke-width="3"/>
+<g font-family="JetBrains Mono,monospace" fill="#22d3ee"><text x="400" y="148" text-anchor="middle" font-size="20">MCP</text><text x="400" y="174" text-anchor="middle" font-size="12" fill="#6f819d">search · postcode · get</text></g>
+<g stroke="#22d3ee" stroke-width="3" fill="none"><path d="M260 155H300"/><path d="M500 155H560"/><path d="M286 143l14 12-14 12"/><path d="M546 143l14 12-14 12"/></g>
+<g stroke="#3b82f6" stroke-width="2" fill="#0b1830"><path d="M570 100v110c0 18 36 30 80 30s80-12 80-30V100"/><ellipse cx="650" cy="100" rx="80" ry="24"/></g>
+<g fill="none" stroke="#3b82f6" stroke-width="2"><path d="M570 140c0 18 36 30 80 30s80-12 80-30"/><path d="M570 180c0 18 36 30 80 30s80-12 80-30"/></g>
+<text x="650" y="108" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="13" fill="#34d399">5.7M UK companies</text>
+<text x="650" y="270" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="12" fill="#6f819d">SQLite · FTS5 trigram index</text>
+<rect x="40" y="320" width="720" height="150" rx="14" fill="#0b1830" stroke="#1d2f4d" stroke-width="2"/>
+<g font-family="JetBrains Mono,monospace" font-size="12" fill="#6f819d"><text x="64" y="350">number</text><text x="180" y="350">name</text><text x="470" y="350">status</text><text x="580" y="350">SIC</text></g>
+<path d="M60 362H740" stroke="#1d2f4d"/>
+<g fill="#13264a"><rect x="64" y="378" width="70" height="9" rx="4.5"/><rect x="180" y="378" width="220" height="9" rx="4.5"/><rect x="64" y="404" width="70" height="9" rx="4.5"/><rect x="180" y="404" width="170" height="9" rx="4.5"/><rect x="64" y="430" width="70" height="9" rx="4.5"/><rect x="180" y="430" width="250" height="9" rx="4.5"/></g>
+<g fill="#34d399" font-family="JetBrains Mono,monospace" font-size="12"><text x="470" y="387">active</text><text x="470" y="413">active</text><text x="470" y="439">active</text><text x="580" y="387">62020</text><text x="580" y="413">62020</text><text x="580" y="439">62090</text></g>
+</svg>
