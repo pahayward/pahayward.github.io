@@ -91,6 +91,8 @@ figcaption{margin-top:12px;font-size:13.5px;line-height:1.45;color:var(--muted)}
 .art{background:#fff;border-bottom:1px solid rgba(0,0,0,.06)}.art img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top}
 .body{display:flex;flex-direction:column;gap:12px;flex:1;padding:26px 28px 30px}.card h3{font-size:clamp(24px,2vw,30px)}.card p{margin:0;font-size:15.5px;line-height:1.48;color:var(--ink-2)}
 .card .note{font-size:13px;color:var(--muted)}
+.card.feature{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr)}.card.feature .art{background:#0b0b0e;border-bottom:0;display:flex;align-items:center}.card.feature .art img{aspect-ratio:1416/940;object-fit:contain}.card.feature .body{justify-content:center}
+@media(max-width:734px){.card.feature{grid-template-columns:minmax(0,1fr)}}
 .fun{display:inline-block;vertical-align:middle;margin-left:6px;padding:4px 9px;border-radius:999px;background:#e3e6eb;color:var(--ink-2);font-size:11.5px;font-weight:500;letter-spacing:0}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:8px}.tags span{padding:5px 11px;border-radius:999px;background:#fff;color:var(--ink-2);font-size:12.5px}
 .more{display:inline-flex;align-items:center;min-height:44px;margin:-6px 0 -12px;color:var(--accent);font-size:15px;font-weight:500;text-decoration:none;overflow-wrap:anywhere}.more:hover{text-decoration:underline}
@@ -432,7 +434,15 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;pa
       </ul></article></section>
 <section class="tiles labs" id="labs"><div class="tile wide dark center"><div class="eyebrow">Chapter 05 · Labs</div>
 <h2>Tools I build to learn fast</h2>
-<p class="lede">Side projects, newest first: security tooling, company research, practical AI tooling, offline learning, a game or two and a little pharmacokinetics.</p></div>
+<p class="lede">Side projects, newest first: security tooling, company research, practical AI tooling, offline learning, a game or two, a little pharmacokinetics and GPU rendering streamed over WebRTC.</p></div>
+<article class="tile wide card feature"><div class="art"><img src="img/moleculeexplore.jpg" alt="A ball-and-stick caffeine molecule rendered by Unity and streamed to Chrome, with a WebRTC stats overlay showing NVENC H.264 at 1280x720 and 60 fps" loading="lazy"></div>
+<div class="body">
+          <h3>MoleculeExplore <span class="fun">Proof of concept</span></h3>
+          <p>Claude built this one end to end, with a Unity scene as the render source. A Unity player renders a caffeine molecule on an NVIDIA GPU, encodes it to H.264 with NVENC and streams it over WebRTC to a plain HTML page in Chrome. Pointer, wheel and key input go back over data channels, and the server decides what they do: orbit, grab and rotate, zoom. The idea was mine. Claude did the design, code, builds, testing and docs, driving the Unity editor through the Unity MCP server.</p>
+          <p>Latency is measured in the frame itself. The server draws the number of the last input it applied as black and white cells, and the page reads them back from the decoded video. On localhost, the median from input to the frame on screen is 70 ms at 1280×720 and 60 fps.</p>
+          <div class="tags"><span>Unity</span><span>C#</span><span>WebRTC</span><span>NVENC</span><span>Unity MCP</span><span>Claude Code</span></div>
+          <a class="more" href="https://github.com/pahayward/MoleculeExplore">github.com/pahayward/MoleculeExplore →</a>
+        </div></article>
 <article class="tile half card"><div class="art"><img src="img/secdash.jpg" alt="SecDash overview: a security posture score of 41 out of 100, findings by severity, and host, attack surface and system pressure panels" loading="lazy"></div>
 <div class="body">
           <h3>SecDash</h3>
